@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'maxhealthcare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'maxhealthcare'),
+        'NAME': 'maxhealthcare',
     }
 }
 
