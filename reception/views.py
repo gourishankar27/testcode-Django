@@ -9,6 +9,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    xyz = reception.objects.all()
-    context = {'xyz':xyz}
-    return render(request ,'reception/index.html',context)
+    return HttpResponse("<h2> This page belongs to receptionist</h2>")
