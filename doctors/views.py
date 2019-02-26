@@ -17,3 +17,4 @@ class UpadtePatient(generic.UpdateView):
     model = PatientData
     fields = ['patient_caseName','patient_caseInfo','patient_relatedDoc']
     template_name = 'doctors/addPatient'
+    
