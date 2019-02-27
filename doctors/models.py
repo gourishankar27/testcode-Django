@@ -1,18 +1,21 @@
-from django.contrib.auth.models import Permission, User
-from from django.core.validators import int_list_validator
 from django.db import models
 
 
+
 class docs(models.Model):
-  patient_RID = models.Charfield
-  "patient_DID
-  "Hospital ID":"",
-  "Case Name":"",
-  "Case Number":""
-  "Realted Doc":""
-  "Case Info":"",
-            
-    def __str__(self):
-        return self.doc_name
+  RecepID = models.Charfield(max_length='20')
+  DocsID = models.Charfield(max_lenght='20')
+  HospitalID = models.Charfield(max_lenght='20')
 
+  def __str__(self):
+    return self.RecepID +'-'+ self.DocsID +'-'+ self.HospitalID
 
+class case(models.Model):
+  docs = models.ForeignKey(docs, on_delete=models.CASCADE)
+  CaseNumber = models.CharField()
+  CaseName = models.Charfield(max_lenght='20')
+  CaseInfo = models.CharField(max_length='250')
+  DocUploads = models.FileField()
+
+  def __str__(self):
+    return self.CaseNumber+'-'+self.CaseName

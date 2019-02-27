@@ -1,12 +1,11 @@
 from django.conf.urls import url
-from . import views
+from .import views
 
 app_name = 'doctors'
 
 urlpatterns = [
-    url(r'^doctors/signUp/$', views.index, name='doctors'),
-    url(r'^(?P<patient_ID>[0-9]+)/$', views.detail, name='detail'),
-    url(r'^create_album/$', views.CreatePatient, name='create_patient'),
-    url(r'^(?P<patient_ID>[0-9]+)/$', views.UpdatePatient, name='update_patient'),
-
+    path(r'^doctorSearch/$', views.index, name='doctors_index'),
+    path(r'^add_(?P<patient_ID>[0-9]+)/$', views.detail, name='add_case'),
+    path(r'^view_(?P<patient_ID>[0-9]+)/$', views.UpdatePatient, name='append_case'),
+    path(r'^add_(?P<patient_ID>[0-9]+)/$', views.detail, name='view_case'),
 ]

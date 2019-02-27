@@ -9,12 +9,12 @@ class IndexView(generic.listView)
     def get_queryset(self):
         return docs.objects.all()
 
-class DetailView(generic.DetailView):
-    model = PatientData
+class AddCase(request):
+    context = {'PatientData'}
     template_name = 'doctors/patient_view.html'
 
 class UpadtePatient(generic.UpdateView):
     model = PatientData
     fields = ['patient_caseName','patient_caseInfo','patient_relatedDoc']
-    template_name = 'doctors/addPatient'
+    template_name = 'doctors/addPatient.html'
     
