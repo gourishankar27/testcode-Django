@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+%<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -9,34 +9,34 @@
     <title>MaxHelathCare Receptionist</title>
 
     <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'reception/assets/dist/img/ico/favicon.png' %}" type="image/x-icon">
 
         <!-- Start Global Mandatory Style
         =====================================================================-->
         <!-- jquery-ui css -->
-        <link href="{% static 'reception/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap -->
-        <link href="{% static 'reception/assets/bootstrap/css/bootstrap.min.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap rtl -->
         <!--<link href="assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
         <!-- Lobipanel css -->
-        <link href="{% static 'reception/assets/plugins/lobipanel/lobipanel.min.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/plugins/lobipanel/lobipanel.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Pace css -->
-        <link href="{% staic 'reception/assets/plugins/pace/flash.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% staic 'reception/assets/plugins/pace/flash.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Font Awesome -->
-        <link href="{% static 'reception/assets/font-awesome/css/font-awesome.min.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Pe-icon -->
-        <link href="{% static 'reception/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap-wysihtml5 css -->
-        <link href="{% static 'reception/assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Themify icons -->
-        <link href="{% static 'reception/assets/themify-icons/themify-icons.css" rel="stylesheet'}" type="text/css"/>
+        <link href="{% static 'reception/assets/themify-icons/themify-icons.css" rel="stylesheet'%}" type="text/css"/>
         <!-- End Global Mandatory Style
         =====================================================================-->
         <!-- Start Theme Layout Style
         =====================================================================-->
         <!-- Theme style -->
-        <link href="{% static 'reception/assets/dist/css/stylehealth.min.css'}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'reception/assets/dist/css/stylehealth.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Theme style rtl -->
         <!--<link href="assets/dist/css/stylehealth-rtl.css" rel="stylesheet" type="text/css"/>-->
         <!-- End Theme Layout Style
@@ -49,11 +49,11 @@
             <a href="index.html" class="logo"> <!-- Logo -->
                 <span class="logo-mini">
                     <!--<b>A</b>BD-->
-                    <img src="{% static 'reception/assets/dist/img/mini-logo.png'}" alt="">
+                    <img src="{% static 'reception/assets/dist/img/mini-logo.png'%}" alt="">
                 </span>
                 <span class="logo-lg">
                     <!--<b>Admin</b>BD-->
-                    <img src="{% static 'reception/assets/dist/img/logo.png'}" alt="">
+                    <img src="{% static 'reception/assets/dist/img/logo.png'%}" alt="">
                 </span>
             </a>
             <!-- Header Navbar -->
@@ -70,7 +70,7 @@
                                         <li class="dropdown dropdown-user admin-user">
                                             <a href="add-patient.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                                 <div class="user-image">
-                                                    <img src="{% static 'reception/assets/dist/img/avatar4.png'}" class="img-circle" height="40" width="40" alt="User Image">
+                                                    <img src="{% static 'reception/assets/dist/img/avatar4.png'%}" class="img-circle" height="40" width="40" alt="User Image">
                                                 </div>
                                             </a>
                                             <ul class="dropdown-menu">
@@ -91,7 +91,7 @@
                                 <!-- Sidebar user panel -->
                                 <div class="user-panel">
                                     <div class="image pull-left">
-                                        <img src="{% static 'reception/assets/dist/img/avatar5.png'}{% static 'reception/" class="img-circle" alt="User Image">
+                                        <img src="{% static 'reception/assets/dist/img/avatar5.png'%}{% static 'reception/" class="img-circle" alt="User Image">
                                     </div>
                                     <div class="info">
                                         <h4>Welcome</h4>
@@ -258,28 +258,28 @@
         <!-- Start Core Plugins
         =====================================================================-->
         <!-- jQuery -->
-        <script src="{% static 'reception/assets/plugins/jQuery/jquery-1.12.4.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/jQuery/jquery-1.12.4.min.js'%}" type="text/javascript"></script>
         <!-- jquery-ui --> 
-        <script src="{% static 'reception/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js'%}" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="{% static 'reception/assets/bootstrap/js/bootstrap.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/bootstrap/js/bootstrap.min.js'%}" type="text/javascript"></script>
         <!-- lobipanel -->
-        <script src="{% static 'reception/assets/plugins/lobipanel/lobipanel.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/lobipanel/lobipanel.min.js'%}" type="text/javascript"></script>
         <!-- Pace js -->
-        <script src="{% static 'reception/assets/plugins/pace/pace.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/pace/pace.min.js'%}" type="text/javascript"></script>
         <!-- SlimScroll -->
-        <script src="{% static 'reception/assets/plugins/slimScroll/jquery.slimscroll.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/slimScroll/jquery.slimscroll.min.js'%}" type="text/javascript"></script>
         <!-- FastClick -->
-        <script src="{% static 'reception/assets/plugins/fastclick/fastclick.min.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/plugins/fastclick/fastclick.min.js'%}" type="text/javascript"></script>
         <!-- Hadmin frame -->
-        <script src="{% static 'reception/assets/dist/js/custom1.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/dist/js/custom1.js'%}" type="text/javascript"></script>
         
         <!-- End Core Plugins
         =====================================================================-->
         <!-- Start Theme label Script
         =====================================================================-->
         <!-- Dashboard js -->
-        <script src="{% static 'reception/assets/dist/js/custom.js'}" type="text/javascript"></script>
+        <script src="{% static 'reception/assets/dist/js/custom.js'%}" type="text/javascript"></script>
         <!-- End Theme label Script
         =====================================================================-->
         
