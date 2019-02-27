@@ -130,17 +130,11 @@
                         <i class="pe-7s-note2"></i>
                     </div>
                     <div class="header-title">
-                        <form action="add-patient.html#" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
-                            <div class="input-group">
-                                <input type="text" name="q" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                    <button type="submit" name="search" id="search-btn" class="btn"><i class="fa fa-search"></i></button>
-                                </span>
-                            </div>
-                        </form>  
+                        <form action="/createPatient" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
+                            {% csrf_token %}
                         <h1>Patient</h1>
                         <small>Creating Patient </small>
-                        
+                       
                     </div>
                 </section>
                 <!-- Main content -->
@@ -159,27 +153,27 @@
                                         <form class="col-sm-6">
                                             <div class="form-group">
                                                 <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter First Name" required>
+                                                <input type="text" name="firstname"> <!--class="form-control" placeholder="Enter First Name" required-->
                                             </div>
                                             <div class="form-group">
                                                 <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter last Name" required>
+                                                <input type="text" name="lastName" class="form-control" placeholder="Enter last Name" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Mobile</label>
-                                                <input type="number" class="form-control" placeholder="Enter Mobile" required>
+                                                <input type="number" name="mobile" class="form-control" placeholder="Enter Mobile" required>
                                             </div>
 											   <div class="form-group">
                                                 <label>Case Number</label>
-                                                <input type="number" class="form-control" placeholder="Enter Case number" required>
+                                                <input type="number" name="caseNumber" class="form-control" placeholder="Enter Case number" required>
                                             </div>
 											   <div class="form-group">
                                                 <label>Doctor ID</label>
-                                                <input type="number" class="form-control" placeholder="Enter Doctor ID" required>
+                                                <input type="number" name="doctorID" class="form-control" placeholder="Enter Doctor ID" required>
                                             </div>
 											   <div class="form-group">
                                                 <label>Age </label>
-                                                <input type="number" class="form-control" placeholder="Enter Age" required>
+                                                <input type="number" name="age" class="form-control" placeholder="Enter Age" required>
                                             </div>
                                             
                                             
@@ -192,26 +186,26 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Email ID </label>
-                                                <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Email ID">
+                                                <input name="emailID" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Email ID">
                                             </div>
 											
 											<div class="form-group">
                                                 <label>Height </label>
-                                                <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Height">
+                                                <input name="height" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Height">
                                             </div>
 											
 											<div class="form-group">
                                                 <label>Weight</label>
-                                                <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter weight">
+                                                <input name="weight" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter weight">
                                             </div>
 											<div class="form-group">
                                                 <label>Body Mass Index</label>
-                                                <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Body Mass Index">
+                                                <input name="bodyMassIndex" class="datepicker form-control hasDatepicker" type="text" placeholder="Enter Body Mass Index">
                                             </div>
 											
                                             <div class="form-group">
                                                 <label>Date of Birth</label>
-                                                <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" placeholder="Date of Birth">
+                                                <input name="dateOfBirth" class="datepicker form-control hasDatepicker" type="text" placeholder="Date of Birth">
                                             </div>
                                             <div class="form-group">
                                                 <label>Blood group</label>
@@ -236,12 +230,9 @@
 
                                       <div class="form-group">
                                         <label>Address</label>
-                                        <textarea class="form-control" rows="3" required></textarea>
+                                        <textarea name="address" class="form-control" rows="3" required></textarea>
                                     </div>
-                                    <div class="reset-button">
-                                     <a href="add-patient.html#" class="btn btn-warning">Reset</a>
-                                     <a href="add-patient.html#" class="btn btn-success">Save</a>
-                                 </div>
+                                    <input type="submit" name=submitbutton value="submit1">
                              </form>
                          </div>
                      </div>
