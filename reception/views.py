@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .models import patient
 
-# Create your views here.
-#hey pratik!
+from django.http import HttpResponse
+
+
+def index(request):
+    return render(request, "reception/reception.html")
