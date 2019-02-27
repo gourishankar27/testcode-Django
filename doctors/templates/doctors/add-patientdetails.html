@@ -59,7 +59,7 @@
             </a>
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top ">
-                <a href="add-patientdetails#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+                <a href="add-patientdetails.html#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-tasks"></span>
                 </a>
@@ -69,7 +69,7 @@
                         
                                         <!-- user -->
                                         <li class="dropdown dropdown-user admin-user">
-                                            <a href="add-patientdetails#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                            <a href="add-patientdetails.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                                 <div class="user-image">
                                                     <img src="{ % static 'doctors/assets/dist/img/avatar4.p' %}ng" class="img-circle" height="40" width="40" alt="User Image">
                                                 </div>
@@ -107,14 +107,14 @@
                                     </li>
                                   
                                     <li class="active">
-                                        <a href="add-patientdetails#">
+                                        <a href="add-patientdetails.html#">
                                             <i class="fa fa-user"></i><span>Patient</span>
                                             <span class="pull-right-container">
                                                 <i class="fa fa-angle-left pull-right"></i>
                                             </span>
                                         </a>
                                         <ul class="treeview-menu">
-                                            <li><a href="add-patientdetails">Patient Diagnostics</a></li>
+                                            <li><a href="add-patientdetails.html">Patient Diagnostics</a></li>
 
                                         </ul>
                                     </li>
@@ -131,7 +131,7 @@
                         <i class="pe-7s-note2"></i>
                     </div>
                     <div class="header-title">
-                        <form action="/add-patientdetails" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
+                        <form action="/add-patientdetails.html" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
                             {% csrf_token %}
                             <div class="input-group">
                                 <input type="text" name="q" class="form-control" placeholder="Search...">
