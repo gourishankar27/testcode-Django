@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import patient
-
 from django.http import HttpResponse
 
 
@@ -15,4 +14,5 @@ def createPatient(request):
     except:
         Exception
 
+|
     return HttpResponse("HI " + var)
