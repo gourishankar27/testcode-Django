@@ -40,6 +40,7 @@ def createPatient(request):
         pat.pat_mon_no = mobile
         pat.pat_address = address
         pat.pat_age = age
+        pat.save()
 
     except:
         Exception
