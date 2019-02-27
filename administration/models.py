@@ -8,9 +8,13 @@ class Doctor(models.Model):
     doc_mob_no = models.CharField(max_length=12)
     doc_address = models.CharField(max_length=500)
     doc_age = models.CharField(max_length=2)
+    doc_email = models.CharField(max_length=40)
     doc_lic_no = models.CharField(max_length=100)
     doc_admin_id = models.CharField(max_length=50)
     doc_patient_id = models.CharField(max_length=100)
+    doc_sex = modesl.CharField(max_length=10)
+    doc_design = CharField(max_lemngth=50)
+    doc_exp = CharField(max_length=4)
     
     def __str__(self):
         return self.doc_name + ' - ' + self.doc_id
