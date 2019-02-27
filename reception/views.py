@@ -7,6 +7,11 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "reception/reception.html")
 
+
+
+       
+
+
 def createPatient(request):
     try:
         firstName = request.GET.get('firstName')
@@ -27,6 +32,15 @@ def createPatient(request):
         elif(getsex=='0'):
             sex = 'Female'       
         
+        pat = patient()
+        pat.pat_name = firstName+" "+lastName
+        pat.pat_id = '1234'
+        pat.hos_id = 'pune4321'
+        pat.pat_email_id = emailID
+        pat.pat_mon_no = mobile
+        pat.pat_address = address
+        pat.pat_age = age
+
     except:
         Exception
 
