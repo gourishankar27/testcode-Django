@@ -23,9 +23,26 @@ def index(request):
 #   def get_queryset(self):
  #       return docs.objects.all()
 
-#def AddCaseView():
-    #model = docs
-    #    template_name = 'doctors/patient_view.html'
+def AddCaseView():
+    template = 'doctors/add-patientdetails.html'
+    try:
+        CaseName = request.GET.get('casename')
+        CaseInfo = request.GET.get('caseinfo')
+        DocUpload = request.GET.get('doc')
+        Medicines = request.GET.get('medicines')
+
+        pat = Case()
+        pat.CaseName = CaseName
+        pat.CaseInfo = CaseInfo
+        pat.Medicines = Medicines
+        pat.DocUploads = DocUpload
+        pat.save()
+
+    except:
+        Exception
+
+    return HttpResponse("<h1>Data Encrypted and Stored<> "  "\n" + CaseName + "\n" + CaseInfo + "\n" + Medicines )
+
 
 #def AppendCaseView():
     #    model = docs
