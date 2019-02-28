@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from .models import patient
-
 from django.http import HttpResponse
 
 
 def index(request):
     return render(request, "reception/reception.html")
+
+
+
+       
+
 
 def createPatient(request):
     try:
@@ -27,7 +31,25 @@ def createPatient(request):
         elif(getsex=='0'):
             sex = 'Female'       
         
+        pat = patient()
+        pat.pat_name = firstName+" "+lastName
+        pat.pat_id = '1234'
+        pat.hos_id = 'pune4321'
+        pat.pat_email_id = emailID
+        pat.pat_mon_no = mobile
+        pat.pat_address = address
+        pat.pat_age = age
+        pat.save()
+
+
+
+        posts = patient.objects.all()
+        for post in posts:
+            print(post.pat_name)
+
     except:
         Exception
 
+
     return HttpResponse("" + firstName + "\n"+lastName+"\n"+mobile+"\n"+caseNumber+"\n"+doctorID+"\n"+age+"\n"+emailID+"\n"+weight+"\n"+bodyMassIndex+"\n"+dateOfBirth+" "+address+" "+" "+sex)
+
