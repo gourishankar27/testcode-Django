@@ -41,6 +41,12 @@ def createPatient(request):
         pat.pat_age = age
         pat.save()
 
+
+
+        posts = patient.objects.all()
+        for post in posts:
+            print(post.pat_name)
+
     except:
         Exception
 

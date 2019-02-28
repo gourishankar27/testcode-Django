@@ -22,10 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('reception.urls')),
     path('', include('administration.urls')),
-<<<<<<< HEAD
-    path('', include ('Doctors.urls')),
-=======
-    path('', include('login.urls')),
-
->>>>>>> b3c78b9b54a951339f0e9d4120c479f2d9039632
+    path('', include ('doctors.urls')),
 ]
