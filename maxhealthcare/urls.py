@@ -20,5 +20,8 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('reception/',include('reception.urls')),
+    path('', include('reception.urls')),
+    path('', include('administration.urls')),
+    path('', include('login.urls')),
+
 ]

@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from . import views
+from reception.views import index,createPatient
 
 urlpatterns = [
-    url(r'$' , views.index,name = "index"),
+    url(r'^reception/' , index),
+    url(r'^createPatient/', createPatient)
 ]
