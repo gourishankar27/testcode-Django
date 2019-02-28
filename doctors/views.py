@@ -57,7 +57,11 @@ def AddCaseView(request):
 #  template_name = 'doctors/patient_view.html'
 
 
-#def ViewCaseView():
-   
-# Every case number will have append button, thus will direct to ameyas append page
+def ViewCaseView():
+    template = 'doctors/add-patientdetails.html'
+    obj = Case.objects.all()
+    context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+    # Every case number will have append button, thus will direct to ameyas append page
+    return render(request,template,context)   
+
 
