@@ -1,6 +1,3 @@
-from django.conf.urls import url
-from administration.views import index
-
-urlpatterns = [
-    url(r'^administration/' , index),
-]
+from django.contrib import admin
+from django.urls import include,path
+from django.conf.urls import url,include
