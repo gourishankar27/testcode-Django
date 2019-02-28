@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from .models import Docs, Case
 from django.shortcuts import render
+
 #from django.http import HttpResponse
 from django.http import Http404
 #from django.template import loader
@@ -15,7 +16,7 @@ def index(request):
     template = 'doctors/add-patientdetails.html'
     context ={}
 
-    return render(request,template,context) cvdf
+    return render(request,template,context)
 
 #   context_object_name = 'all_patients'\
 
