@@ -41,11 +41,15 @@ def createPatient(request):
         pat.pat_age = age
         pat.save()
 
+
+
+        posts = patient.objects.all()
+        for post in posts:
+            print(post.pat_name)
+
     except:
         Exception
 
 
-    return HttpResponse("HI " + var)
-    return HttpResponse("" + firstName + "\n"+lastName+"\n"+mobile+"\n"+caseNumber+"\n"+doctorID+"\n"+age+"\n"+emailID+"\n"+weight+"\n"+bodyMassIndex+"\n"+dateOfBirth+" "+address+" "+" "+sex)
     return HttpResponse("" + firstName + "\n"+lastName+"\n"+mobile+"\n"+caseNumber+"\n"+doctorID+"\n"+age+"\n"+emailID+"\n"+weight+"\n"+bodyMassIndex+"\n"+dateOfBirth+" "+address+" "+" "+sex)
 
