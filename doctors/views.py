@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from .models import docs, case
+from .models import Docs, Case
 from django.shortcuts import render
 
 #from django.http import HttpResponse
