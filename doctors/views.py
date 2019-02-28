@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from .models import Docs, Case
 from django.shortcuts import render
+
 #from django.http import HttpResponse
 from django.http import Http404
 #from django.template import loader
@@ -15,7 +16,7 @@ def index(request):
     template = 'doctors/add-patientdetails.html'
     context ={}
 
-    return render(request,template,context) cvdf
+    return render(request,template,context)
 
 #   context_object_name = 'all_patients'\
 
@@ -23,7 +24,7 @@ def index(request):
 #   def get_queryset(self):
  #       return docs.objects.all()
 
-def AddCaseView():
+def AddCaseView(request):
     template = 'doctors/add-patientdetails.html'
     try:
         CaseName = request.GET.get('casename')
@@ -31,12 +32,19 @@ def AddCaseView():
         DocUpload = request.GET.get('doc')
         Medicines = request.GET.get('medicines')
 
-        pat = Case()
+        pat = case()
         pat.CaseName = CaseName
         pat.CaseInfo = CaseInfo
         pat.Medicines = Medicines
         pat.DocUploads = DocUpload
         pat.save()
+
+
+        template = 'doctors/add-patientdetails.html'
+        obj = case.objects.all()
+        context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+
+        return render(request,template,context)
 
     except:
         Exception
@@ -49,7 +57,11 @@ def AddCaseView():
 #  template_name = 'doctors/patient_view.html'
 
 
-#def ViewCaseView():
-    #   model = docs
-    #fields = ['patient_caseName','patient_caseInfo','patient_relatedDoc']
-    #template_name = 'doctors/addPatient'
+def ViewCaseView():
+    template = 'doctors/add-patientdetails.html'
+    obj = Case.objects.all()
+    context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+    # Every case number will have append button, thus will direct to ameyas append page
+    return render(request,template,context)   
+
+
