@@ -16,11 +16,7 @@ def index(request):
     template = 'doctors/add-patientdetails.html'
     context ={}
 
-<<<<<<< HEAD
-    return render(request,template,context) 
-=======
     return render(request,template,context)
->>>>>>> 826c51a6be3a7dee041ca047542e8b00c7f19800
 
 #   context_object_name = 'all_patients'\
 
