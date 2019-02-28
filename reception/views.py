@@ -44,9 +44,4 @@ def createPatient(request):
     except:
         Exception
 
-<<<<<<< HEAD
-|
-    return HttpResponse("HI " + var)
-=======
     return HttpResponse("" + firstName + "\n"+lastName+"\n"+mobile+"\n"+caseNumber+"\n"+doctorID+"\n"+age+"\n"+emailID+"\n"+weight+"\n"+bodyMassIndex+"\n"+dateOfBirth+" "+address+" "+" "+sex)
->>>>>>> fabbb6f0b0700891b891bcbe4b5323bdadd992ad
