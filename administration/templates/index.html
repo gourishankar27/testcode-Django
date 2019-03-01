@@ -9,41 +9,41 @@
     <title>MAX HEALTH CARE</title>
 
     <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="{% static 'patient/assets/dist/img/ico/favicon.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{ % static 'administration/assets/dist/img/ico/favicon.png' % }" type="image/x-icon">
    <!-- Start Global Mandatory Style
    =====================================================================-->
    <!-- jquery-ui css -->
-   <link href="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Bootstrap -->
-   <link href="{% static 'patient/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/bootstrap/css/bootstrap.min.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Bootstrap rtl -->
    <!--<link href="assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
    <!-- Lobipanel css -->
-   <link href="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/plugins/lobipanel/lobipanel.min.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Pace css -->
-   <link href="{% static 'patient/assets/plugins/pace/flash.css" rel="stylesheet' %}" type="text/css"/>
+   <link href="{ % static 'administration/assets/plugins/pace/flash.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Font Awesome -->
-   <link href="{% static 'patient/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/font-awesome/css/font-awesome.min.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Pe-icon -->
-   <link href="{% static 'patient/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' % }" rel="stylesheet" type="text/css"/>
    <!-- Themify icons -->
-   <link href="{% static 'patient/assets/themify-icons/themify-icons.css' %}" rel="stylesheet" type="text/css"/>
+   <link href="{ % static 'administration/assets/themify-icons/themify-icons.css' % }" rel="stylesheet" type="text/css"/>
         <!-- End Global Mandatory Style
         =====================================================================-->
         <!-- Start page Label Plugins 
         =====================================================================-->
         <!-- Toastr css -->
-        <link href="{% static 'patient/assets/plugins/toastr/toastr.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{ % static 'administration/assets/plugins/toastr/toastr.css' % }" rel="stylesheet" type="text/css"/>
         <!-- Emojionearea -->
-        <link href="{% static 'patient/assets/plugins/emojionearea/emojionearea.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{ % static 'administration/assets/plugins/emojionearea/emojionearea.min.css' % }" rel="stylesheet" type="text/css"/>
         <!-- Monthly css -->
-        <link href="{% static 'patient/assets/plugins/monthly/monthly.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{ % static 'administration/assets/plugins/monthly/monthly.css' % }" rel="stylesheet" type="text/css"/>
         <!-- End page Label Plugins 
         =====================================================================-->
         <!-- Start Theme Layout Style
         =====================================================================-->
         <!-- Theme style -->
-        <link href="{% static 'patient/assets/dist/css/stylehealth.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{ % static 'administration/assets/dist/css/stylehealth.min.css' % }" rel="stylesheet" type="text/css"/>
         <!--<link href="assets/dist/css/stylehealth-rtl.css" rel="stylesheet" type="text/css"/>-->
         <!-- End Theme Layout Style
         =====================================================================-->
@@ -55,12 +55,12 @@
                 <a href="index.html" class="logo"> <!-- Logo -->
                     <span class="logo-mini">
                         <!--<b>A</b>H-admin-->
-                        <img src="{% static 'patient/assets/dist/img/mini-logo.png' %}" alt="">
+                        <img src=" {% static 'administration/assets/dist/img/mini-logo.png' % }" alt="">
                     </span>
                     <span class="logo-lg">
                         <!--<b>Admin</b>H-admin-->
-                        <img src="{% static 'patient/assets/dist/img/logo.png' %}" alt="">
-                    </span>patient/
+                        <img src=" {% static 'administration/assets/dist/img/logo.png' % }" alt="">
+                    </span>
                 </a>
                 <!-- Header Navbar -->
                 <nav class="navbar navbar-static-top ">
@@ -77,7 +77,7 @@
                             <li class="dropdown dropdown-user admin-user">
                                 <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                 <div class="user-image">
-                                <img src="{% static 'patient/assets/dist/img/avatar4.png' %}" class="img-circle" height="40" width="40" alt="User Image">
+                                <img src="{% static 'administration/assets/dist/img/avatar4.png' % }" class="img-circle" height="40" width="40" alt="User Image">
                                 </div>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -98,43 +98,57 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="image pull-left">
-                            <img src="{% static 'patient/assets/dist/img/avatar5.png' %}" class="img-circle" alt="User Image">
+                            <img src="{ % static 'administration/assets/dist/img/avatar5.png' % }" class="img-circle" alt="User Image">
                         </div>
                         <div class="info">
                             <h4>Welcome</h4>
-                            <p>Patient</p>
+                            <p>Mr. Admin</p>
                         </div>
                     </div>
                    
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                          <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
+                            <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
                             </a>
                         </li>
                         <li class="treeview">
                             <a href="index.html#">
-                                <i class="fa fa-user-md"></i><span>View Details</span>
+                                <i class="fa fa-user-md"></i><span>Doctor</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="table.html">Personal Details</a></li>
+                                <li><a href="forms_basic_doc.html">Add Doctor</a></li>
+                                <li><a href="table.html">Doctor list</a></li>
+                                
                             </ul>
-                         </li>
+                        </li>
                         <li class="treeview">
                             <a href="index.html#">
-                              <i class="fa fa-file-text"></i><span>Report</span>
-                              <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="doctor-wise-report.html">Doctor wise Report</a></li>
-                            <li><a href="total-report.html">Total Report</a></li>
-                        </ul>
-                    </li>
+                                <i class="fa fa-user"></i><span>Receptionist</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="forms_basic_recep.html">Add receptionist</a></li>
+                                <li><a href="table2.html">Receptionist list</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="index.html#">
+                                <i class="fa fa-sitemap"></i><span>Department</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="add-department.html">Add Department</a></li>
+                                <li><a href="dep-list.html">Department list</a></li>
+                            </ul>
+                        </li>
                     <li class="treeview">
                         <a href="index.html#">
                             <i class="fa fa-file-text-o"></i><span>Notice</span>
@@ -143,6 +157,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
+                            <li><a href="add-notice.html">Add Notice</a></li>
                             <li><a href="not-list.html">Notice list</a></li>
                         </ul>
                     </li>      
@@ -174,6 +189,65 @@
                         </ol>
                     </div>
                 </section>
+            <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                            <div class="panel panel-bd cardbox">
+                                <div class="panel-body">
+                                    <div class="statistic-box">
+                                        <h2><span class="count-number">15</span>
+                                        </h2>
+                                    </div>
+                                    <div class="items pull-left">
+                                        <i class="fa fa-users fa-2x"></i>
+                                        <h4>Total Doctors </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                            <div class="panel panel-bd cardbox">
+                                <div class="panel-body">
+                                    <div class="statistic-box">
+                                        <h2><span class="count-number">19</span>
+                                        </h2>
+                                    </div>
+                                    <div class="items pull-left">
+                                        <i class="fa fa-users fa-2x"></i>
+                                        <h4>Active Doctors</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                            <div class="panel panel-bd cardbox">
+                                <div class="panel-body">
+                                    <div class="statistic-box">
+                                        <h2><span class="count-number">9</span>
+                                        </h2>
+                                    </div>
+                                    <div class="items pull-left">
+                                        <i class="fa fa-users fa-2x"></i>
+                                        <h4>Total Receptionist</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                            <div class="panel panel-bd cardbox">
+                                <div class="panel-body">
+                                    <div class="statistic-box">
+                                        <h2><span class="count-number">6</span>
+                                        </h2>
+                                    </div>
+                                    <div class="items pull-left">
+                                        <i class="fa fa-user-circle fa-2x"></i>
+                                        <h4>Active Receptionist</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 <div class="row">
                         <!-- datamap -->
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 ">  
@@ -310,52 +384,52 @@
          <!-- Start Core Plugins
         =====================================================================-->
         <!-- jQuery -->
-        <script src="{% static 'patient/assets/plugins/jQuery/jquery-1.12.4.minpatient/' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/jQuery/jquery-1.12.4.min.js' % }" type="text/javascript"></script>
         <!-- jquery-ui --> 
-        <script src="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js' % }" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="{% static 'patient/assets/bootstrap/js/bootstrap.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/bootstrap/js/bootstrap.min.js' % }" type="text/javascript"></script>
         <!-- lobipanel -->
-        <script src="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/lobipanel/lobipanel.min.js' % }" type="text/javascript"></script>
         <!-- Pace js -->
-        <script src="{% static 'patient/assets/plugins/pace/pace.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/pace/pace.min.js' % }" type="text/javascript"></script>
         <!-- SlimScroll -->
-        <script src="{% static 'patient/assets/plugins/slimScroll/jquery.slimscroll.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/slimScroll/jquery.slimscroll.min.js' % }" type="text/javascript"></script>
         <!-- FastClick -->
-        <script src="{% static 'patient/assets/plugins/fastclick/fastclick.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/fastclick/fastclick.min.js' % }" type="text/javascript"></script>
         <!-- Hadmin frame -->
-        <script src="{% static 'patient/assets/dist/js/custom1.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/dist/js/custom1.js' % }" type="text/javascript"></script>
         <!-- End Core Plugins
         =====================================================================-->
         <!-- Start Page Lavel Plugins
         =====================================================================-->
         <!-- Toastr js -->
-        <script src="{% static 'patient/assets/plugins/toastr/toastr.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/toastr/toastr.min.js' % }" type="text/javascript"></script>
         <!-- Sparkline js -->
-        <script src="{% static 'patient/assets/plugins/sparkline/sparkline.min.js' %}' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/sparkline/sparkline.min.js' % }" type="text/javascript"></script>
         <!-- Data maps js -->
-        <script src="{% static 'patient/assets/plugins/datamaps/d3.min.js' %}' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/datamaps/topojson.min.js' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/datamaps/datamaps.all.min.js' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/datamaps/d3.min.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/datamaps/topojson.min.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/datamaps/datamaps.all.min.js' % }" type="text/javascript"></script>
         <!-- Counter js -->
-        <script src="{% static 'patient/assets/plugins/counterup/waypoints.js' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/counterup/jquery.counterup.min.js' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/counterup/waypoints.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/counterup/jquery.counterup.min.js' % }" type="text/javascript"></script>
         <!-- ChartJs JavaScript -->
-        <script src="{% static 'patient/assets/plugins/chartJs/Chart.min.js' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/emojionearea/emojionearea.min.js' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/chartJs/Chart.min.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/emojionearea/emojionearea.min.js' % }" type="text/javascript"></script>
         <!-- Monthly js -->
-        <script src="{% static 'patient/assets/plugins/monthly/monthly.js' %}" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/monthly/monthly.js' % }" type="text/javascript"></script>
         <!-- Data maps -->
-        <script src="{% static 'patient/assets/plugins/datamaps/d3.min.js' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/datamaps/topojson.min.js' %}" type="text/javascript"></script>
-        <script src="{% static 'patient/assets/plugins/datamaps/datamaps.all.min.js' %}" type="text/javascript"></script>
-      patient/
+        <script src="{ % static 'administration/assets/plugins/datamaps/d3.min.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/datamaps/topojson.min.js' % }" type="text/javascript"></script>
+        <script src="{ % static 'administration/assets/plugins/datamaps/datamaps.all.min.js' % }" type="text/javascript"></script>
+      
         <!-- End Page Lavel Plugins
         =====================================================================-->
         <!-- Start Theme label Script
         =====================================================================-->
         <!-- Dashboard js -->
-        <script src="{% static 'patient/assets/dist/js/custom.js" type="text/javascript' %}"></script>
+        <script src="{ % static 'administration/assets/dist/js/custom.js' % }" type="text/javascript"></script>
 
         <!-- End Theme label Script
         =====================================================================-->
@@ -369,7 +443,7 @@
                         showMethod: 'slideDown',
                         timeOut: 1000
                     };
-                    toastr.success('Responsive Admin Theme', 'Welcome to Health Admin');
+                    toastr.success( 'Welcome to Max Care Admin !');
 
                 }, 1300);
 

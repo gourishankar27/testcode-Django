@@ -68,7 +68,7 @@ def createReceptionist(request):
         recp.rec_address = rec_address
         recp.rec_sex = rec_sex
     
-     except:
+    except:
         Exception
         return HttpResponse("" + rec_name + "\n"+ rec_mob_no +"\n" + rec_age +"\n" + rec_email +"\n" + rec_address +"\n" + rec_sex +"\n" + rec_id)
     
