@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'startpage.apps.StartpageConfig',
     'doctors.apps.DoctorsConfig',
     'login.apps.LoginConfig',
     'administration.apps.AdministrationConfig',
