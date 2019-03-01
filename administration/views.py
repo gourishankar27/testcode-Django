@@ -43,7 +43,7 @@ def createDoctor(request):
         
     except:
         Exception 
-        return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_exp +  "\n"+ doc_address + "\n" + doc_age +  "\n")
+        return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
 
 def createReceptionist(request):
      try:
