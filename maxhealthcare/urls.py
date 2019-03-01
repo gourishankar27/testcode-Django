@@ -25,7 +25,6 @@ urlpatterns = [
     path('', include('administration.urls')),
     path('', include ('doctors.urls')),
     path('', include('login.urls')),
-    
-    #path('', )
+    path('', include('startpage.urls')),
 
 ]
