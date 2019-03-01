@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import patient
+from login.models import login
 from django.http import HttpResponse
 
 
@@ -41,6 +42,12 @@ def createPatient(request):
         pat.pat_age = age
         pat.save()
 
+
+        log = login()
+        log.loginId = firstName
+        log.passWord = '223344'
+        log.userType = 'patient'
+        log.save()
 
 
         posts = patient.objects.all()
