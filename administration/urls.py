@@ -4,7 +4,7 @@ from django.conf.urls import url,include
 from administration.views import createDoctor,createReceptionist
 
 urlpatterns = [
-    url(r'^creatdoctor/', createDoctor),
+    url(r'^administration/', createDoctor),
     url(r'^creatreceptionist/', createReceptionist),
     
 ]
