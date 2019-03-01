@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from .models import patient
 from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, "startpage/startpage.html")
+    return render(request, "max/startpage.html")
