@@ -1,11 +1,10 @@
 from django.contrib import admin
 from django.urls import include,path
 from django.conf.urls import url,include
-from . import views
-
-app_name = 'administration'
+from administration.views import createDoctor,createReceptionist
 
 urlpatterns = [
+    url(r'^creatdoctor/', createDoctor),
+    url(r'^creatreceptionist/', createReceptionist),
     
-    url(r'^$', views.index, name='administrations_index'),
 ]
