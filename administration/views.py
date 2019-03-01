@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Doctor,Receptionist,Admin
+from .models import Doctor, Receptionist, Admin
 
 from django.http import HttpResponse
 
@@ -7,7 +7,7 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "administration/index.html")
 
-def creatDoctor(request):
+def createDoctor(request):
     try:
         doc_name = request.GET.get('Name1')
         doc_mob_no  = request.GET.get('mob_no')
@@ -23,30 +23,29 @@ def creatDoctor(request):
 
 
         sex='No value set'
-        if(getsex=='1'):
+        if(doc_sex == '1'):
             sex = 'Male'
-        elif(getsex=='0'):
+        elif(doc_sex == '0'):
             sex = 'Female'    
 
         doc = Doctor()
-        doc.doc_name = Name1
+        doc.doc_name = doc_name
         doc.doc_id = '1234'
         doc.hos_id = 'pune4321'
-        doc.doc_email_id = email
-        doc.doc_mob_no = mob_no
-        doc.doc_address = address
-        doc.doc_age = age
-        doc.doc_sex = sex
-        doc.doc_dep = dep
-        doc.doc_exp = year_exp
+        doc.doc_email = doc_email
+        doc.doc_mob_no = doc_mob_no
+        doc.doc_address = doc_address
+        doc.doc_age = doc_age
+        doc.doc_sex = doc_sex
+        doc.doc_dep = doc_dep
+        doc.doc_exp = doc_exp
         doc.save()   
         
     except:
         Exception 
+        return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_exp +  "\n"+ doc_address + "\n" + doc_age +  "\n")
 
-     return HttpResponse("" + name +  "\n"+ dep + "\n" + mob_no + "\n" + email + "\n" + doc_id + "\n" + year_exp +  "\n"+ address + "\n" + age +  "\n"+  )
-
-def creatReceptionist(request):
+def createReceptionist(request):
      try:
         rec_name = request.GET.get('Name1')
         rec_mob_no  = request.GET.get('mob_no')
@@ -54,24 +53,23 @@ def creatReceptionist(request):
         rec_email = request.GET.get('email')
         rec_address = request.GET.get('address')
         rec_sex = request.GET.get('sex')
-        sex='No value set'
-        if(getsex=='1'):
+        sex = 'No value set'
+        if(rec_sex == '1'):
             sex = 'Male'
-        elif(getsex=='0'):
+        elif(rec_sex == '0'):
             sex = 'Female' 
         rec_id = request.GET.get('rec_id')
 
-        rec =  Receptionist()
-        rec_name = Name1
-        rec_mob_no  = mob_no
-        rec_age = age
-        rec_email = email
-        rec_address = address
-        rec_sex = sex
+        recp = Receptionist()
+        recp.rec_name = rec_name
+        recp.rec_mob_no = rec_mob_no
+        recp.rec_age = rec_age
+        recp.rec_email = rec_email
+        recp.rec_address = rec_address
+        recp.rec_sex = rec_sex
     
-    except:
-        Exception 
-
-    return HttpResponse("" + Name1 + "\n"+ mob_no +"\n" + age +"\n" + email +"\n" + address +"\n" + sex +"\n" + rec_id)     
+     except:
+        Exception
+        return HttpResponse("" + rec_name + "\n"+ rec_mob_no +"\n" + rec_age +"\n" + rec_email +"\n" + rec_address +"\n" + rec_sex +"\n" + rec_id)
     
 
