@@ -8,7 +8,8 @@ from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login
 from django.urls import reverse_lazy
-from django.views import generic
+from django.views import generic\
+    
 #from .forms import UserForm
 
 
