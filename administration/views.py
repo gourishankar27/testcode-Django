@@ -169,3 +169,6 @@ def createReceptionist(request):
 def sample(request):
     return render(request, 'administration/forms_basic_doc.html')
     #return HttpResponse("Hey!")
+
+def email(request):
+    return render(request,'administration/email.html')

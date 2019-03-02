@@ -8,6 +8,7 @@ from login.models import login
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.mail import EmailMessage
+import hashlib
 
 def index(request):
     return render(request, "reception/reception.html")
@@ -64,14 +65,16 @@ def createPatient(request):
                             subject = 'Thank you for registering to our site'
                             message = ' The private key is '+password
                             email_from = settings.EMAIL_HOST_USER
-                            recipient_list = [''+emailID,]
-                            send_mail( subject, message, email_from, recipient_list )
+                            recipient_list = [''+emailID, ]
+                            send_mail(subject, message, email_from, recipient_list)
                         except Exception as e:
                             print(e)
+                        enc_uname = hashlib.sha256(mobile.encode("utf-8")).hexdigest()
+                        enc_passs = hashlib.sha256(password.encode("utf-8")).hexdigest()
 
                         log = login()
-                        log.loginId = mobile
-                        log.passWord = password
+                        log.loginId = enc_uname
+                        log.passWord = enc_passs
                         log.userType = 'patient'
                         log.save()
 
