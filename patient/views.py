@@ -7,12 +7,20 @@ from reception import views
 
 #pat_data = patient()
 
-def pat_diplsay(request):
+def index_patient(request):
+    return render(request, 'patient/total-report.html')
+
+def pat_display(request):
+
     pat_data = patient.objects.all()
     context = {
         'pat_data': pat_data
     }
-    return render(request, 'index.html', context)
+    #for id in pat_data:
+        #if pat_data.id == "":
+            #print "Correct!"
+    #return HttpResponse("<h1>Hiii</h1>")       
+    return render(request, 'patient/sample.html', context)
 
     #pat_data = patient()
     #pat_name = pat_data.pat_name

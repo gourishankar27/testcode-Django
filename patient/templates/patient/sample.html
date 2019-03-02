@@ -1,0 +1,7 @@
+{% if pat_data %}
+    {% for var in pat_data %}
+        <li>var-{{ var.pat_name }}</li>
+    {% endfor %}
+{% else %}
+    <h2>Errror</h2>
+{% endif %}

@@ -41,7 +41,7 @@ def createDoctor(request):
         doc.doc_sex = doc_sex
         doc.doc_dep = doc_dep
         doc.doc_exp = doc_exp
-        doc.save()   
+        doc.save() 
 
         print(doc.name)
         return HttpResponse("CreateDoctor success")
