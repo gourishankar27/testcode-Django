@@ -15,21 +15,26 @@ from django.views import generic\
 def index_doctor(request):
     return render(request, "doctors/index_doctors.html")
 
-def AddCaseView(request):
+def gotoAddCaseView(request):
+    return render(request, 'doctors/add-patientdetails.html')
 
+def AddCaseView(request):
+    print("inside add case view")
     try:
         CaseName = request.GET.get('case_name')
         CaseInfo = request.GET.get('diagnostic')
         DocUpload = request.GET.get('picture')
         Medicines = request.GET.get('medicines')
+        try:
 
-        pat = Case()
-        pat.CaseName = CaseName
-        pat.CaseInfo = CaseInfo
-        pat.Medicines = Medicines
-        pat.DocUploads = DocUpload
-        pat.save()
-
+            pat = Case()
+            pat.CaseName = CaseName
+            pat.CaseInfo = CaseInfo
+            pat.Medicines = Medicines
+            pat.DocUploads = DocUpload
+            pat.save()
+        except Exception as e:
+            print(e)
         read = Case.objects.all()
         context = {
             'read': read
@@ -37,18 +42,16 @@ def AddCaseView(request):
 
         #return render(request, 'doctors/views_patient.html', context)
         #return render(request, 'doctors/details.html')
-        return render(request, 'doctors/index_doctors.html', context)
+        #return render(request, 'doctors/index_doctors.html', context)
+        #return render(request, 'doctors/add-patientdetails.html')
         #return HttpResponse(
-          #  "<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(
-           #     Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
+           #"<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(
+           #Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
 
-        template = 'doctors/add-patientdetails.html'
-        obj = Case.objects.all()
-        context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+        
 
-    except:
-        Exception
-        print(Exception)
+    except Exception as e:
+        print(e)
 
         #return HttpResponse("hello")
     #return render(request, 'doctors/details.html', context)
@@ -76,14 +79,4 @@ def ViewCaseView(request):
     context = {
         'allcases': allcases
     }
-
-'''def ViewCaseView():
-    template = 'doctors/add-patientdetails.html'
-    obj = Case.objects.all()
-    context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
-    # append button will redirect to append page
-    return render(request,template,context)   
-'''
-
-
-    #return render(request, 'doctors/views_patient.html', context)
+    return render(request, 'doctors/views_patient.html', context)

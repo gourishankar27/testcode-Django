@@ -11,7 +11,7 @@ class Docs(models.Model):
 
 
 class Case(models.Model):
-  Docs = models.ForeignKey(Docs, on_delete=models.CASCADE)
+  #Docs = models.ForeignKey(Docs, on_delete=models.CASCADE)
   CaseNumber = models.CharField(max_length=20)
   CaseName = models.CharField(max_length=20)
   CaseInfo = models.CharField(max_length=250)
