@@ -34,11 +34,3 @@ def loginusers(request):
         return HttpResponse("")
     except:
         print(Exception)
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> f73da17519c7ca6dcd4901b020787c67ec694aff
->>>>>>> d0e5987bcd2ec6ef5610e6a0a9c6d4b98f3bbd8b
