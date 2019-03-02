@@ -42,8 +42,14 @@
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item cta"><a href="login.html" class="nav-link"><span>Login</span></a></li>
-        </ul>
+					<li class="nav-item cta">
+					
+					<form action="\gotologin" method="GET" >
+					{% csrf_token %}
+					<input type="submit" name="login" value="LOGIN">
+					</form>
+					</li>
+				</ul>
       </div>
     </div>
   </nav>
