@@ -33,7 +33,6 @@ def loginusers(request):
              #   return HttpResponse("User not found")
         return HttpResponse("")
     except:
-=======
 
 from django.shortcuts import render
 from .models import login
@@ -56,19 +55,17 @@ def loginusers(request):
         for types in logintype:
             if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
                 print(types.userType)
-<<<<<<< HEAD
                 #return HttpResponse(""+types.userType)
                 return render(request,"dummy/login.html")
             else:
                 return HttpResponse("User not found")
-=======
                 print(types.loginId)
                 #return HttpResponse(""+types.userType)
                 return render(request,"dummy/login.html")
             #else:
              #   return HttpResponse("User not found")
->>>>>>> 17c62eeca74df5ef3d80699f3756817328981d03
+
         return HttpResponse("")
     except:
->>>>>>> ee3b27f9a5de7c6c64403d5e25714850e24e1994
+
         print(Exception)
