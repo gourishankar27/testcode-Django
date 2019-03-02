@@ -52,7 +52,7 @@
         <!-- Site wrapper -->
         <div class="wrapper">
             <header class="main-header">
-                <a href="index.html" class="logo"> <!-- Logo -->
+                <a href="administration/index.html" class="logo"> <!-- Logo -->
                     <span class="logo-mini">
                         <!--<b>A</b>H-admin-->
                         <img src=" {% static 'administration/assets/dist/img/mini-logo.png' %}" alt="">
@@ -64,7 +64,7 @@
                 </a>
                 <!-- Header Navbar -->
                 <nav class="navbar navbar-static-top ">
-                    <a href="index.html#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+                    <a href="administration/index.html#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-tasks"></span>
                     </a>
@@ -75,7 +75,7 @@
                                   
                             <!-- user -->
                             <li class="dropdown dropdown-user admin-user">
-                                <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                <a href="administration/index.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                 <div class="user-image">
                                 <img src="{% static 'administration/assets/dist/img/avatar4.png' %}" class="img-circle" height="40" width="40" alt="User Image">
                                 </div>
@@ -120,13 +120,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <!--<li><a href="administration/forms_basic_doc.html">Add Doctor</a></li>-->
-                                <form action="/createDoctor">
-                                    <div>
-                                        <input type="submit" name="add_doctor" value="Add Doctor">
-                                    </div>
+
+                                <form action="\gotocreatedoctor" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createdoctor" value="Add Doctor">
+
                                 </form>
-                                <li><a href="table.html">Doctor list</a></li>
+
+                                <li><a href="administration/table.html#">Doctor list</a></li>
                                 
                             </ul>
                         </li>
@@ -138,39 +139,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <!--<li><a href="forms_basic_recep.html">Add receptionist</a></li>-->
-                                <form action="/createReceptionist">
-                                    <div>
-                                        <input type="submit" name="add_receptionist" value="Add Receptionist">
-                                    </div>
+                                 <form action="\gotocreatereceptionist" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createreceptionist" value="Add Receptionist">
+
                                 </form>
-                                <li><a href="table2.html">Receptionist list</a></li>
+                                <li><a href="administration/table.html">Receptionist list</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
-                            <a href="index.html#">
-                                <i class="fa fa-sitemap"></i><span>Department</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add-department.html">Add Department</a></li>
-                                <li><a href="dep-list.html">Department list</a></li>
-                            </ul>
-                        </li>
-                    <li class="treeview">
-                        <a href="index.html#">
-                            <i class="fa fa-file-text-o"></i><span>Notice</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="add-notice.html">Add Notice</a></li>
-                            <li><a href="not-list.html">Notice list</a></li>
-                        </ul>
-                    </li>      
                 </ul>        
         </div> <!-- /.sidebar -->
     </aside>
@@ -179,7 +155,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                     <form action="index.html#" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
+                     <form action="administration/index.html#" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
                             <div class="input-group">
                             <input type="text" name="q" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
@@ -194,7 +170,7 @@
                         <h1> Dashboard</h1>
                         <small> Dashboard features</small>
                         <ol class="breadcrumb hidden-xs">
-                            <li><a href="index.html"><i class="pe-7s-home"></i> Home</a></li>
+                            <li><a href="administration/index.html"><i class="pe-7s-home"></i> Home</a></li>
                             <li class="active">Dashboard</li>
                         </ol>
                     </div>
@@ -268,7 +244,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="embed-container">
-                                        <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.0075834208!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2sus!4v1394298866288' width='600' height='450' style='border:0'></iframe>
+                                        <iframe src='https://goo.gl/maps/wa43iNED4Tw' width='600' height='450' style='border:0'></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +301,7 @@
                             </div>
                          </div>
                     </div>
-                    </div>><!-- /.row -->
+
                 </section> <!-- /.content -->
 
             </div> <!-- /.content-wrapper -->
