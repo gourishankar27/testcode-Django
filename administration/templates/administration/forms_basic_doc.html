@@ -86,26 +86,26 @@
                             <!-- =============================================== -->
                             <!-- Left side column. contains the sidebar -->
                             <aside class="main-sidebar">
-                                <!-- sidebar -->
-                                <div class="sidebar">
-                                    <!-- Sidebar user panel -->
-                                    <div class="user-panel">
-                                        <div class="image pull-left">
-                                            <img src="{% static 'administration/assets/dist/img/avatar5.png' %}" class="img-circle" alt="User Image">
-                                        </div>
-                                        <div class="info">
-                                            <h4>Welcome</h4>
-                                            <p>Mr. Admin</p>
-                                        </div>
-                                    </div>
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="image pull-left">
+                            <img src="{% static 'administration/assets/dist/img/avatar5.png' %}" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <h4>Welcome</h4>
+                            <p>Mr. Admin</p>
+                        </div>
+                    </div>
 
-                                    <!-- sidebar menu -->
-                                    <ul class="sidebar-menu">
-                                        <li class="active">
-                                            <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
-                                            </a>
-                                        </li>
-                                       <li class="treeview">
+                    <!-- sidebar menu -->
+                    <ul class="sidebar-menu">
+                        <li class="active">
+                            <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
                             <a href="index.html#">
                                 <i class="fa fa-user-md"></i><span>Doctor</span>
                                 <span class="pull-right-container">
@@ -113,9 +113,15 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="forms_basic_doc.html">Add Doctor</a></li>
-                                <li><a href="table.html">Doctor list</a></li>
-                                
+
+                                <form action="\gotocreatedoctor" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createdoctor" value="Add Doctor">
+
+                                </form>
+
+                                <li><a href="administration/table.html#">Doctor list</a></li>
+
                             </ul>
                         </li>
                         <li class="treeview">
@@ -126,25 +132,17 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="forms_basic_recep.html">Add receptionist</a></li>
-                                <li><a href="pt-list.html">Receptionist list</a></li>
+                                 <form action="\gotocreatereceptionist" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createreceptionist" value="Add Receptionist">
+
+                                </form>
+                                <li><a href="administration/table.html">Receptionist list</a></li>
                             </ul>
                         </li>
-                    <li class="treeview">
-                        <a href="index.html#">
-                            <i class="fa fa-file-text-o"></i><span>Notice</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="add-notice.html">Add Notice</a></li>
-                            <li><a href="not-list.html">Notice list</a></li>
-                        </ul>
-                    </li>      
-                        </ul>
-                    </div> <!-- /.sidebar -->
-                </aside>
+                </ul>
+        </div> <!-- /.sidebar -->
+    </aside>
                 <!-- =============================================== -->
                 <!-- Content Wrapper. Contains page content -->
                 <div class="content-wrapper">

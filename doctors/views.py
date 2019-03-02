@@ -85,5 +85,4 @@ def ViewCaseView(request):
     return render(request,template,context)   
 '''
 
-
     #return render(request, 'doctors/views_patient.html', context)
