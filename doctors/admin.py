@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import patient, Docs, Case
+from .models import Docs, Case
 
 # Register your models here.
 admin.site.register(Docs)

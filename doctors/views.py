@@ -30,11 +30,21 @@ def AddCaseView(request):
         pat.DocUploads = DocUpload
         pat.save()
 
+        read = Case.objects.all()
+        context = {
+            'read': read
+        }
+
+        #return render(request, 'doctors/views_patient.html', context)
+        #return render(request, 'doctors/details.html')
+        return render(request, 'doctors/index_doctors.html', context)
+        #return HttpResponse(
+          #  "<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(
+           #     Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
 
         template = 'doctors/add-patientdetails.html'
         obj = Case.objects.all()
         context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
-
 
     except:
         Exception
@@ -60,6 +70,13 @@ def AddCaseViewButton(request):
 #  template_name = 'doctors/patient_view.html'
 
 
+
+def ViewCaseView(request):
+    allcases = Case.objects.all()
+    context = {
+        'allcases': allcases
+    }
+
 '''def ViewCaseView():
     template = 'doctors/add-patientdetails.html'
     obj = Case.objects.all()
@@ -68,4 +85,4 @@ def AddCaseViewButton(request):
     return render(request,template,context)   
 '''
 
-    return render(request, 'doctors/views_patient.html', context)
+    #return render(request, 'doctors/views_patient.html', context)

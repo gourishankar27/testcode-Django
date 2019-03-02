@@ -32,5 +32,4 @@ urlpatterns = [
     #path('', )
     path('', include('startpage.urls')),
     #url(r'^sample/', include('administration.urls')),
-
 ]
