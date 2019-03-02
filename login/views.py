@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import login
 from django.http import HttpResponse
 from dummy.views import index
+from reception.views import index
 
 
 def index(request):
@@ -19,13 +20,15 @@ def loginusers(request):
         for types in logintype:
             if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
                 print(types.userType)
-                print(types.loginID)
+                print(types.loginId)
+                #return HttpResponse(""+types.userType)
                 if(types.userType == 'reception'):
                     return render(request,"reception/reception.html")
-                #return HttpResponse(""+types.userType)
-                #return render(request,"dummy/login.html")
                 elif(types.userType == 'patient'):
                     return render(request,"dummy/login.html")
+                
+            #else:
+             #   return HttpResponse("User not found")
         return HttpResponse("")
     except:
         print(Exception)
