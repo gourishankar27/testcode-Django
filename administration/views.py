@@ -19,7 +19,7 @@ def gotocreatedoctor(request):
 def createDoctor(request):
     try:
         doc_name = request.GET.get('Name1')
-        doc_mob_no  = request.GET.get('mob_no')
+        doc_mob_no = request.GET.get('mob_no')
         doc_age = request.GET.get('age')
         doc_email = request.GET.get('email')
         doc_address = request.GET.get('address')
@@ -29,17 +29,16 @@ def createDoctor(request):
         doc_design = request.GET.get('design')
         doc_dep = request.GET.get('department')
         doc_exp = request.GET.get('year_exp')
-        
         sex='No value set'
         if(doc_sex == '1'):
             sex = 'Male'
         elif(doc_sex == '0'):
-            sex = 'Female'        
+            sex = 'Female'       
         try:
             user_exists = False
             posts = login.objects.all()
             for post in posts:
-                if(mobile ==post.loginId):
+                if(doc_mob_no == post.loginId):
                     print("mobile already exist")
                     user_exists = True
             if(not user_exists):
@@ -71,13 +70,13 @@ def createDoctor(request):
                             subject = 'Thank you for registering to our site'
                             message = ' The private key is '+password
                             email_from = settings.EMAIL_HOST_USER
-                            recipient_list = [''+emailID,]
+                            recipient_list = [''+doc_email,]
                             send_mail( subject, message, email_from, recipient_list )
                         except Exception as e:
                             print(e)
 
                         log = login()
-                        log.loginId = mob_no
+                        log.loginId = doc_mob_no
                         log.passWord = password
                         log.userType = 'doctor'
                         log.save()
@@ -87,15 +86,16 @@ def createDoctor(request):
                         for post in posts:
                             print(post.pat_name)
                         '''
+                        return render(request,'administration/index.html')
         except Exception as e:
             print(e)               
     except Exception as e:
         print(e)
-    return HttpResponse("CreateDoctor success1")    
+        
     #return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
 
 def gotocreatereceptionist(request):
-    return render(request, "administration/forms_basic_recep.html")
+    return render(request, 'administration/forms_basic_recep.html')
 
 def createReceptionist(request):
      try:
@@ -116,7 +116,7 @@ def createReceptionist(request):
             user_exists = False
             posts = login.objects.all()
             for post in posts:
-                if(mobile ==post.loginId):
+                if(rec_mob_no ==post.loginId):
                     print("mobile already exist")
                     user_exists = True
             if(not user_exists):
@@ -142,13 +142,13 @@ def createReceptionist(request):
                             subject = 'Thank you for registering to our site'
                             message = ' The private key is '+password
                             email_from = settings.EMAIL_HOST_USER
-                            recipient_list = [''+emailID,]
+                            recipient_list = [''+rec_email,]
                             send_mail( subject, message, email_from, recipient_list )
                         except Exception as e:
                             print(e)
 
                         log = login()
-                        log.loginId = mob_no
+                        log.loginId = rec_mob_no
                         log.passWord = password
                         log.userType = 'reception'
                         log.save()
@@ -158,6 +158,7 @@ def createReceptionist(request):
                         for post in posts:
                             print(post.pat_name)
                         '''
+                        return render(request,'administration/forms_basic_recep.html')
         except Exception as e:
             print(e)               
      except Exception as e:
