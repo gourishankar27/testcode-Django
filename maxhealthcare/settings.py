@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'startpage.apps.StartpageConfig',
+    'dummy.apps.DummyConfig',
     'doctors.apps.DoctorsConfig',
     'login.apps.LoginConfig',
     'administration.apps.AdministrationConfig',
