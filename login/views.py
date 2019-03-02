@@ -23,12 +23,14 @@ def loginusers(request):
                 print(types.loginId)
                 #return HttpResponse(""+types.userType)
                 if(types.userType == 'reception'):
+                    print("Reception")
                     return render(request,"reception/reception.html")
                 elif(types.userType == 'patient'):
+                    print("Patient")
                     return render(request,"dummy/login.html")
                 
             #else:
              #   return HttpResponse("User not found")
         return HttpResponse("")
-    except:
-        print(Exception)
+    except Exception as e:
+        print(e)
