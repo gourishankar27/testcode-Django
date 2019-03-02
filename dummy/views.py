@@ -14,7 +14,7 @@ def gotonext(request):
         ld = loginDetails()
         ld.username = uname
         ld.password = passs
-        ld.types = "amey"
+        ld.types = "doctor"
         ld.save()
 
         '''

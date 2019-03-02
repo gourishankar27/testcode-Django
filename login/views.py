@@ -12,11 +12,14 @@ def loginusers(request):
         username = request.GET.get('username')
         password = request.GET.get('pass')
         #print(""+username+"\n"+password)
-        
+        print(username)
+        print()
         logintype = login.objects.all()
+        
         for types in logintype:
             if(types.loginId == username and types.passWord == password):
                 print(types.userType)
+                print(types.loginId)
                 return HttpResponse(""+types.userType)
             else:
                 return HttpResponse("User not found")

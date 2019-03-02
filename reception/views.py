@@ -2,7 +2,8 @@ from django.shortcuts import render
 from .models import patient
 from login.models import login
 from django.http import HttpResponse
-
+import secrets
+import string
 
 def index(request):
     return render(request, "reception/reception.html")
@@ -43,8 +44,16 @@ def createPatient(request):
         pat.save()
 
 
+        alphabet = string.ascii_letters + string.digits
+        password = ''.join(secrets.choice(alphabet) for i in range(20)) # for a 20-character password
+
+
+        
+
+
+
         log = login()
-        log.loginId = firstName
+        log.loginId = emailID
         log.passWord = '223344'
         log.userType = 'patient'
         log.save()
@@ -55,7 +64,7 @@ def createPatient(request):
             print(post.pat_name)
 
     except:
-        Exception
+        print(Exception)
 
 
     return HttpResponse("" + firstName + "\n"+lastName+"\n"+mobile+"\n"+caseNumber+"\n"+doctorID+"\n"+age+"\n"+emailID+"\n"+weight+"\n"+bodyMassIndex+"\n"+dateOfBirth+" "+address+" "+" "+sex)
