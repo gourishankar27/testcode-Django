@@ -79,4 +79,13 @@ def ViewCaseView(request):
     context = {
         'allcases': allcases
     }
-    return render(request, 'doctors/views_patient.html', context)
+
+'''def ViewCaseView():
+    template = 'doctors/add-patientdetails.html'
+    obj = Case.objects.all()
+    context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+    # append button will redirect to append page
+    return render(request,template,context)   
+'''
+
+    #return render(request, 'doctors/views_patient.html', context)
