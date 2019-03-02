@@ -8,24 +8,45 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'startpage/css/open-iconic-bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'startpage/css/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/animate.css'%}">
     
-    <link rel="stylesheet" href="{% static 'startpage/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/magnific-popup.css' %}"> 
+    <link rel="stylesheet" href="{% static 'startpage/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/magnific-popup.css'%}"> 
+    <link rel="stylesheet" href="{% static 'startpage/css/aos.css'%}">
 
-    <link rel="stylesheet" href="{% static 'startpage/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'startpage/css/ionicons.min.css'%}">
 
-    <link rel="stylesheet" href="{% static 'startpage/css/ionicons.min.css' %}">
-
-    <link rel="stylesheet" href="{% static 'startpage/css/bootstrap-datepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'startpage/css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/jquery.timepicker.css'%}">
 
     
-    <link rel="stylesheet" href="{% static 'startpage/css/flaticon.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/icomoon.css' %}">
-    <link rel="stylesheet" href="{% static 'startpage/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'startpage/css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/icomoon.css'%}">
+    <link rel="stylesheet" href="{% static 'startpage/css/style.css'%}">
+     <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="{% static 'startpage/assets/dist/img/ico/favicon.png'%}" type="image/x-icon">
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="{% static 'startpage/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="{% static 'startpage/assets/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="{% static 'startpage/assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="{% static 'startpage/assets/plugins/lobipanel/lobipanel.min.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="{% static 'startpage/assets/plugins/pace/flash.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="{% static 'startpage/assets/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="{% static 'startpage/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css'%}" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="{% static 'startpage/assets/themify-icons/themify-icons.css'%}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'startpage/assets/plugins/bootstrap-social/bootstrap-social.css'%}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'startpage/assets/dist/css/stylehealth.min.css'%}" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     
@@ -38,15 +59,64 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item active">
+					
+					<!--<a href="index.html" class="nav-link">Home</a></li>-->
+
+					<form action="\gotohome" method="GET" >
+					{% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+					<input type="submit" name="HOME" value="HOME" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+					</form></li>
+          
+					<li class="nav-item">
+					
+					<!--<a href="about.html" class="nav-link">About</a></li>-->
+
+					<form action="\gotoabout" method="GET" >
+					{% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+					<input type="submit" name="ABOUT" value="ABOUT" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+					</form></li>
+          
+					<!--<li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>-->
+           <li class="nav-item">
+					<form action="\gotodepartments" method="GET" >
+					{% csrf_token %}
+          <br><br>
+          <div class="panel-body">
+          <p class="m-b-15">
+					<input type="submit" name="DEPARTMENTS" value="DEPARTMENTS" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+					</form></li>
+
+          <!--<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
+					<li class="nav-item">
+					<form action="\gotocontacts" method="GET">
+					{% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+					<input type="submit" name="CONTACTS" value="CONTACTS" class="btn btn-purple w-md m-b-5">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          </p></div>
+					</form></li>
+
 					<li class="nav-item cta">
 					
-					{% csrf_token %}
+					
 					<form action="\gotologin" method="GET" >
-					<input type="submit" name="login" value="LOGIN">
+					{% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+					<input type="submit" name="login" value="LOGIN" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
 					</form>
 					</li>
 				</ul>
@@ -55,7 +125,7 @@
   </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap" style="background-image: url({% static 'startpage/images/bg.jpg' %}); background-attachment:fixed;">
+    <div class="hero-wrap" style="background-image: url({% static 'startpage/images/bg.jpg'%}); background-attachment:fixed;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -144,7 +214,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
       </div>
     </section>
 
-    <section class="ftco-section-2 img" style="background-image: url({% static 'startpage/images/bg_3.jpg' %})">
+    <section class="ftco-section-2 img" style="background-image: url({% static 'startpage/images/bg_3.jpg'%})">
     	<div class="container">
     		<div class="row d-md-flex justify-content-end">
     			<div class="col-md-6">
@@ -200,7 +270,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
         	<div class="col-md-6 col-lg-3 ftco-animate">
 	          <div class="block-2">
 	            <div class="flipper">
-	              <div class="front" style="background-image: url({% static 'startpage/images/doctor.jpg' %})">
+	              <div class="front" style="background-image: url({% static 'startpage/images/doctor.jpg'%})">
 	                <div class="box">
 	                  <h2>Doctor A</h2>
 	                  <p>Neurologist</p>
@@ -209,11 +279,11 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
 	              <div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+	                  <p>&ldquo;The Department and The experience the DR has &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image mr-3 align-self-center">
-	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor.jpg' %})"></div>
+	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor.jpg'%})"></div>
 	                  </div>
 	                  <div class="name align-self-center">Doctor B <span class="position">Neurologist</span></div>
 	                </div>
@@ -224,7 +294,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
 	        <div class="col-md-6 col-lg-3 ftco-animate">
 	          <div class="block-2">
 	            <div class="flipper">
-	              <div class="front" style="background-image: url({% static 'startpage/images/doctor.jpg' %})">
+	              <div class="front" style="background-image: url({% static 'startpage/images/doctor.jpg'%})">
 	                <div class="box">
 	                  <h2>Doctor B</h2>
 	                  <p>Pediatrician</p>
@@ -233,35 +303,35 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
 	              <div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+	                  <p>&ldquo;The Department and The experience the DR has &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image mr-3 align-self-center">
-	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor.jpg' %})"></div>
+	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor.jpg'%})"></div>
 	                  </div>
 	                  <div class="name align-self-center">Doctor B <span class="position">Pediatrician</span></div>
 	                </div>
 	              </div>
 	            </div>
 	          </div> <!-- .flip-container -->
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-2">
-	            <div class="flipper">
-	              <div class="imgs" style="background-image: url({% static 'startpage/images/doctor1.jpg' %})">
-	                <div class="box">
-	                  <h2>Doctor C</h2>
-	                  <p>Ophthalmologist</p>
-	                </div>
-	              </div>
-	              <div class="back">
+				</div>
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="block-2">
+						<div class="flipper">
+							<div class="front" style="background-image: url({% static 'startpage/images/doctor1.jpg'%})">
+								<div class="box">
+									<h2>Doctor C</h2>
+									<p>Pediatrician</p>
+								</div>
+							</div>
+							<div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+	                  <p>&ldquo;The Department and The experience the DR has &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image mr-3 align-self-center">
-	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor1.jpg' %})"></div>
+	                    <div class="img" style="background-image: url({% static 'startpage/images/doctor1.jpg'%})"></div>
 	                  </div>
 	                  <div class="name align-self-center">Doctor C <span class="position">Ophthalmologist</span></div>
 	                </div>
@@ -272,7 +342,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
 	        <div class="col-md-6 col-lg-3 ftco-animate">
 	          <div class="block-2">
 	            <div class="flipper">
-	              <div class="front" style="background-image: url({% static 'startpage/images/doctor1.jpg' %})">
+	              <div class="front" style="background-image: url({% static 'startpage/images/doctor1.jpg'%})">
 	                <div class="box">
 	                  <h2>Doctor D</h2>
 	                  <p>Pulmonologist</p>
@@ -281,7 +351,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
 	              <div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem&rdquo;</p>
+	                  <p>&ldquo;The Department and The experience the DR has &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image mr-3 align-self-center">
@@ -303,7 +373,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
     	</div>
     </section>
 
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'startpage/images/bg_4.jpg' %})">
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'startpage/images/bg_4.jpg'%})">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -352,7 +422,7 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
     	</div>
     </section>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url({% static 'startpage/images/bg_5.jpg'  %})">
+    <footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url({% static 'startpage/images/bg_5.jpg'%})">
     	<div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
@@ -386,23 +456,47 @@ We offer a broad spectrum of services like Advanced Brain Tumor Centre, Minimall
       </div>
     </footer>
 
-  <script src="{% static 'startpage/js/jquery.min.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery-migrate-3.0.1.min.js' %}"></script>
-  <script src="{% static 'startpage/js/popper.min.js' %}"></script>
-  <script src="{% static 'startpage/js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.easing.1.3.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.stellar.min.js' %}"></script>
-  <script src="{% static 'startpage/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'startpage/js/aos.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.animateNumber.min.js' %}"></script>
-  <script src="{% static 'startpage/js/bootstrap-datepicker.js' %}"></script>
-  <script src="{% static 'startpage/js/jquery.timepicker.min.js' %}"></script>
-  <script src="{% static 'startpage/js/scrollax.min.js' %}"></script>
+  <script src="{% static 'startpage/js/jquery.min.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{% static 'startpage/js/popper.min.js'%}"></script>
+  <script src="{% static 'startpage/js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.easing.1.3.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.waypoints.min.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.stellar.min.js'%}"></script>
+  <script src="{% static 'startpage/js/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{% static 'startpage/js/aos.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.animateNumber.min.js'%}"></script>
+  <script src="{% static 'startpage/js/bootstrap-datepicker.js'%}"></script>
+  <script src="{% static 'startpage/js/jquery.timepicker.min.js'%}"></script>
+  <script src="{% static 'startpage/js/scrollax.min.js'%}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{% static 'startpage/js/google-map.js' %}"></script>
-  <script src="{% static 'startpage/js/main.js' %}"></script>
+  <script src="{% static 'startpage/js/google-map.js'%}"></script>
+  <script src="{% static 'startpage/js/main.js'%}"></script>
+          <!-- jQuery -->
+        <script src="{% static 'startpage/assets/plugins/jQuery/jquery-1.12.4.min.js'%}" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="{% static 'startpage/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js'%}" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'startpage/assets/bootstrap/js/bootstrap.min.js'%}" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="{% static 'startpage/assets/plugins/lobipanel/lobipanel.min.js'%}" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="{% static 'startpage/assets/plugins/pace/pace.min.js'%}" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="{% static 'startpage/assets/plugins/slimScroll/jquery.slimscroll.min.js'%}" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="{% static 'startpage/assets/plugins/fastclick/fastclick.min.js'%}" type="text/javascript"></script>
+        <!-- Hadmin frame -->
+        <script src="{% static 'startpage/assets/dist/js/custom1.js'%}" type="text/javascript"></script>
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="{% static 'startpage/assets/dist/js/custom.js'%}" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
     
   </body>
 </html>

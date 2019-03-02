@@ -114,13 +114,13 @@
                             </a>
                             <ul class="treeview-menu">
 
-                                <form action="\gotocreatedoctor" method="GET" >
+                                <form action="" method="GET" >
                                     {% csrf_token %}
                                     <input type="submit" name="createdoctor" value="Add Doctor">
 
                                 </form>
 
-                                <li><a href="administration/table.html#">Doctor list</a></li>
+                                <li><a href="administration/table.html">Doctor list</a></li>
 
                             </ul>
                         </li>
@@ -180,7 +180,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
-                                        <form class="col-sm-12">
+                                        <form class="col-sm-12" action="/createDoctor" method="GET">
                                             <div class="col-sm-6 form-group">
                                                 <label>Name</label>
                                                 <input type="text" name="Name1" class="form-control" placeholder="Enter Name" required>
@@ -226,10 +226,11 @@
                                              <div class="col-sm-6 form-group">
                                                 <label>License No.</label>
                                                 <input type="text" name="lic_on" class="form-control" placeholder="Enter License number" required>
-                                            </div>
+                                         bm,l;'
+                                         '  </div>
                                             <div class="col-sm-12 reset-button">
-                                                 <a href="forms_basic.html#" class="btn btn-warning">Reset</a>
-                                                 <a href="forms_basic.html#" class="btn btn-success">Save</a>
+                                                 <a href="index.html" class="btn btn-warning">Reset</a>
+                                                 <input type="submit" name="save" value="Save">
                                              </div>
                                          </form>
                                      </div>

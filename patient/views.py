@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from reception.models import patient
-from reception import views
+from doctors.models import Case
+from doctors import views
 
 # Create your models here.
 
 #pat_data = patient()
 
-def pat_diplsay(request):
+def pat_display(request):
     pat_data = patient.objects.all()
     context = {
         'pat_data': pat_data
     }
-    return render(request, 'index.html', context)
+    return render(request, "patient/index.html")
 
     #pat_data = patient()
     #pat_name = pat_data.pat_name
