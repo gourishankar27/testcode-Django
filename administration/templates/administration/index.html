@@ -113,6 +113,21 @@
                             </a>
                         </li>
                         <li class="treeview">
+                               <!-- <a href="{% static 'email/' %}" > -->
+                                <form action="/email" method="GET">
+                                    {% csrf_token %}
+                                    <input type="submit" name="submit" value="EMAIL">
+                                </form>
+                                    <i class="fa fa-user-md"></i><span>Email</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+
+                               
+
+                        </li>
+                        <li class="treeview">
                             <a href="index.html#">
                                 <i class="fa fa-user-md"></i><span>Doctor</span>
                                 <span class="pull-right-container">
