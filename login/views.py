@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 from django.shortcuts import render
 from .models import login
 from django.http import HttpResponse
