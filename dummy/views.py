@@ -17,11 +17,11 @@ def gotonext(request):
         ld.types = "amey"
         ld.save()
 
-
+        '''
         post = loginDetails.objects.all()
         for po in post:
             print(po)
-
+        '''
 
         return HttpResponse("<input type=\"text\" value="+uname+">")
     except:
