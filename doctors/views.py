@@ -12,28 +12,18 @@ from django.views import generic\
     
 #from .forms import UserForm
 
-
-def index(request):
-    template = 'doctors/add-patientdetails.html'
-    context ={}
-
-    return render(request,template,context)
-
-#   context_object_name = 'all_patients'\
-
-#
-#   def get_queryset(self):
- #       return docs.objects.all()
+def index_doctor(request):
+    return render(request, "doctors/index_doctors.html")
 
 def AddCaseView(request):
-    template = 'doctors/add-patientdetails.html'
+
     try:
-        CaseName = request.GET.get('casename')
-        CaseInfo = request.GET.get('caseinfo')
-        DocUpload = request.GET.get('doc')
+        CaseName = request.GET.get('case_name')
+        CaseInfo = request.GET.get('diagnostic')
+        DocUpload = request.GET.get('picture')
         Medicines = request.GET.get('medicines')
 
-        pat = case()
+        pat = Case()
         pat.CaseName = CaseName
         pat.CaseInfo = CaseInfo
         pat.Medicines = Medicines
@@ -41,16 +31,36 @@ def AddCaseView(request):
         pat.save()
 
 
-        template = 'doctors/add-patientdetails.html'
-        obj = case.objects.all()
-        context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+        read = Case.objects.all()
+        context = {
+            'read': read
+        }
 
-        return render(request,template,context)
+        #return render(request, 'doctors/views_patient.html', context)
+        #return render(request, 'doctors/details.html')
+        return render(request, 'doctors/index_doctors.html', context)
+        #return HttpResponse(
+          #  "<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(
+           #     Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
+
 
     except:
         Exception
+        print(Exception)
 
-    return HttpResponse("<h1>Data Encrypted and Stored<> "  "\n" + CaseName + "\n" + CaseInfo + "\n" + Medicines )
+        #return HttpResponse("hello")
+    #return render(request, 'doctors/details.html', context)
+    #return render(request, 'doctors/views_patient.html', context)
+    return HttpResponse("<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
+
+
+def AddCaseViewButton(request):
+    obj=Case.objects.all()
+    for case in obj:
+        casename = case.CaseName
+        caseinfo = case.CaseInfo
+        medicine = case.Medicines
+    return HttpResponse("<h1>Data Encrypted and Stored</h1> "  "\n" + str(casename) + "\n" + str(caseinfo) + "\n" + str(medicine))
 
 
 #def AppendCaseView():
@@ -58,11 +68,10 @@ def AddCaseView(request):
 #  template_name = 'doctors/patient_view.html'
 
 
-def ViewCaseView():
-    template = 'doctors/add-patientdetails.html'
-    obj = Case.objects.all()
-    context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
-    # append button will redirect to append page
-    return render(request,template,context)   
+def ViewCaseView(request):
+    allcases = Case.objects.all()
+    context = {
+        'allcases': allcases
+    }
 
-
+    return render(request, 'doctors/views_patient.html', context)

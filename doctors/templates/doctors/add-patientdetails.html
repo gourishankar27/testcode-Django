@@ -131,7 +131,7 @@
                         <i class="pe-7s-note2"></i>
                     </div>
                     <div class="header-title">
-                        <form action="/add-patientdetails.html" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
+                        <form action="/AddCaseViewButton" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
                             {% csrf_token %}
                             <div class="input-group">
                                 <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -165,20 +165,22 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
-                                        <form class="col-sm-6">
+                                        <form action="/AddCaseView" method="get" class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Case Name</label>
-                                                <input type="Casename" class="form-control" placeholder="Enter Case Name" required>
+                                                <input type="text" name="case_name" class="form-control" placeholder="Enter Case Name" required>
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Diagnostics</label>
-                                                <textarea class="DiagnosticsReport" rows="3" required></textarea> 
+                                                <input type="text" name="diagnostic" class="form-control" placeholder="Enter diagnostics report" required>
+                                                <!--<textarea class="DiagnosticsReport" rows="3" required></textarea> -->
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Medicines</label>
-												  <textarea class="MedicinesGiven" rows="3" placeholder ="Enter Medication " required></textarea> 
+                                                <input type="text" name="medicines" class="form-control" placeholder="Enter medicines given" required>
+												 <!-- <textarea class="MedicinesGiven" rows="3" placeholder ="Enter Medication " required></textarea> -->
                                               
                                             </div>
                                            
@@ -188,16 +190,37 @@
                                                 <input type="file" name="picture">
                                                 <input type="hidden" name="old_picture">
                                             </div>
+                                            <input type="submit" name=submitbutton value="submit1">
                                     </div>
-                                    <div class="button">
+                                    <!--<div class="button">
                                         <input type="submit" name=submitbutton value="submit1">
-                                     <a class="btn btn-success">Save</a>
-                                 </div>
+                                        <a class="btn btn-success">Save</a>
+                                 </div>-->
+                             </div>
                              </form>
+                            <form action="/AddCaseViewButton">
+                                    <div class="button">
+                                        <input type="submit" name=viewbutton value="view1">
+                                        <a class="btn btn-success">View Cases</a>
+                                     </div>
+                                 </form>
                          </div>
                      </div>
                  </div>
              </div>
+
+            <div>
+
+                <!-- DESIGN APPROPRIATLY
+                <form action="/ViewCaseView">
+                    <div class="button">
+                        <input type="submit" name=viewbutton value="view1">
+                        <a class="btn btn-success">View Cases</a>
+                    </div>
+                </form>
+            </div>
+            -->
+
              
          </section> <!-- /.content -->
      </div> <!-- /.content-wrapper -->
