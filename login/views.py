@@ -20,17 +20,10 @@ def loginusers(request):
         for types in logintype:
             if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
                 print(types.userType)
-<<<<<<< HEAD
-                print(types.loginId)
-                return HttpResponse(""+types.userType)
-            #else:
-             #   return HttpResponse("User not found")
-=======
                 #return HttpResponse(""+types.userType)
                 return render(request,"dummy/login.html")
             else:
                 return HttpResponse("User not found")
->>>>>>> 0bb1ac4f826dc86f29751142bccd91ee8c5375c6
         return HttpResponse("")
     except:
         print(Exception)
