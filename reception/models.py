@@ -1,6 +1,7 @@
 
 # Create your models here.
 from djongo import models
+#from django.db import models
 
 class patient(models.Model):
     pat_name = models.CharField(max_length = 100)

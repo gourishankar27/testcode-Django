@@ -27,7 +27,9 @@ urlpatterns = [
     path('', include('administration.urls')),
     path('', include ('doctors.urls')),
     path('', include('login.urls')),
+    url(r'^patient/', include('patient.urls')),
+    
+    #path('', )
     path('', include('startpage.urls')),
     #url(r'^sample/', include('administration.urls')),
-
 ]
