@@ -400,6 +400,7 @@
                     <div class="panel panel-bd lobidrag">
                         <div class="panel-body"> 
                             <form class="form-inline" action="total-report.html#">
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <label class="sr-only" for="start_date">Start Date</label>
                                     <input type="text" name="start_date" class="form-control datepicker hasDatepicker" id="start_date" placeholder="Start Date" value="25-03-2017">
