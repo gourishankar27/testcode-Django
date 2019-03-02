@@ -4,6 +4,9 @@ from login.models import login
 from django.http import HttpResponse
 import secrets
 import string
+from django.core.mail import send_mail
+from django.conf import settings
+from django.core.mail import EmailMessage
 
 def index(request):
     return render(request, "reception/reception.html")
@@ -45,24 +48,35 @@ def createPatient(request):
 
 
         alphabet = string.ascii_letters + string.digits
-        password = ''.join(secrets.choice(alphabet) for i in range(20)) # for a 20-character password
+        password = ''.join(secrets.choice(alphabet) for i in range(10)) # for a 20-character password
+
+        print(password)
+        '''
+        send_mail('Subject here', 'Here is the message.', settings.EMAIL_HOST_USER,
+         [''+emailID], fail_silently=False)
+        '''
 
 
-        
-
-
+        try:
+            subject = 'Thank you for registering to our site'
+            message = ' The private key is '+password
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [''+emailID,]
+            send_mail( subject, message, email_from, recipient_list )
+        except Exception as e:
+            print(e)
 
         log = login()
-        log.loginId = emailID
-        log.passWord = '223344'
+        log.loginId = mobile
+        log.passWord = password
         log.userType = 'patient'
         log.save()
 
-
+        '''
         posts = patient.objects.all()
         for post in posts:
             print(post.pat_name)
-
+        '''
     except:
         print(Exception)
 

@@ -13,16 +13,16 @@ def loginusers(request):
         password = request.GET.get('pass')
         #print(""+username+"\n"+password)
         print(username)
+        print(password)
         print()
-        logintype = login.objects.all()
-        
+        logintype = login.objects.all()        
         for types in logintype:
-            if(types.loginId == username and types.passWord == password):
+            if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
                 print(types.userType)
                 print(types.loginId)
                 return HttpResponse(""+types.userType)
-            else:
-                return HttpResponse("User not found")
+            #else:
+             #   return HttpResponse("User not found")
         return HttpResponse("")
     except:
         print(Exception)
