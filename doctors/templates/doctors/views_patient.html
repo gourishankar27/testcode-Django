@@ -1,0 +1,8 @@
+<h2>Hello</h2>
+{% if read %}
+    {% for objects in read %}
+            <li>objects-{{objects.id}}---{{object.CaseName}}</li>
+    {% endfor %}
+{% else %}
+    <h4>context not found</h4>
+{% endif %}

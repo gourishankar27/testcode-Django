@@ -6,8 +6,9 @@ class Docs(models.Model):
   DocsID = models.CharField(max_length=20)
   HospitalID = models.CharField(max_length=20)
 
-  #def __str__(self):
-   # return self.RecepID + '-' + self.DocsID + '-' + self.HospitalID
+  def __str__(self):
+    return self.RecepID + '-' + self.DocsID + '-' + self.HospitalID
+
 
 class Case(models.Model):
   Docs = models.ForeignKey(Docs, on_delete=models.CASCADE)
@@ -16,6 +17,3 @@ class Case(models.Model):
   CaseInfo = models.CharField(max_length=250)
   Medicines = models.CharField(max_length=100)
   DocUploads = models.FileField()
-
-  #def __str__(self):
-    #return self.CaseNumber+'-'+ self.CaseName
