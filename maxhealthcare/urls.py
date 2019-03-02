@@ -27,15 +27,9 @@ urlpatterns = [
     path('', include('administration.urls')),
     path('', include ('doctors.urls')),
     path('', include('login.urls')),
-<<<<<<< HEAD
-    path('', include('startpage.urls')),
-    #url(r'^sample/', include('administration.urls')),
-
-=======
     url(r'^patient/', include('patient.urls')),
     
     #path('', )
     path('', include('startpage.urls')),
     #url(r'^sample/', include('administration.urls')),
->>>>>>> 8ad7ac9bd3d54c3d38812dafc41aebe2c4aec16c
 ]
