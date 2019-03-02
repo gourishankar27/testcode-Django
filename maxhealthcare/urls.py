@@ -28,5 +28,6 @@ urlpatterns = [
     path('', include ('doctors.urls')),
     path('', include('login.urls')),
     path('', include('startpage.urls')),
+    #url(r'^sample/', include('administration.urls')),
 
 ]

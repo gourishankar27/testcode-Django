@@ -120,8 +120,19 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
+<<<<<<< HEAD
                                 <li><a href="administration/forms_basic_doc.html">Add Doctor</a></li>
                                 <li><a href="administration/table.html">Doctor list</a></li>
+=======
+
+                                <form action="\gotocreatedoctor" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createdoctor" value="Add Doctor">
+
+                                </form>
+
+                                <li><a href="administration/table.html#">Doctor list</a></li>
+>>>>>>> ee3b27f9a5de7c6c64403d5e25714850e24e1994
                                 
                             </ul>
                         </li>
@@ -133,7 +144,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="administration/forms_basic_recep.html">Add receptionist</a></li>
+                                 <form action="\gotocreatereceptionist" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createreceptionist" value="Add Receptionist">
+
+                                </form>
                                 <li><a href="administration/table.html">Receptionist list</a></li>
                             </ul>
                         </li>
@@ -224,6 +239,79 @@
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+                         <!-- Basic data map -->
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="panel panel-bd lobidrag">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Google Map</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="embed-container">
+                                        <iframe src='https://goo.gl/maps/wa43iNED4Tw' width='600' height='450' style='border:0'></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="panel panel-bd lobidrag">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>DataTables </h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table id="dataTableExample2" class="table table-bordered table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garrett Winters</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>63</td>
+                                                    <td>2011/07/25</td>
+                                                    <td>$170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>Junior Technical Author</td>
+                                                    <td>San Francisco</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>$86,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                </section> <!-- /.content -->
+
+>>>>>>> ee3b27f9a5de7c6c64403d5e25714850e24e1994
             </div> <!-- /.content-wrapper -->
             <footer class="main-footer">
                     <div class="pull-right hidden-xs"> <b>Version</b>MIT</div>

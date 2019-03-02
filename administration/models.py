@@ -23,7 +23,7 @@ class Doctor(models.Model):
 class Receptionist(models.Model):
     rec_name = models.CharField(max_length=100)
     rec_id = models.CharField(max_length=100)
-    hos_id = models.CharField(max_length = 30)
+    hos_id = models.CharField(max_length=30)
     rec_email_id = models.CharField(max_length=50)
     rec_mob_no = models.CharField(max_length=12)
     rec_address =  models.CharField(max_length=500)
