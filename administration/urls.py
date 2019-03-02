@@ -11,8 +11,8 @@ from administration.views import index,createDoctor,createReceptionist
 
 urlpatterns = [
     url(r'^administration/', index),
-    url(r'^createdoctor', createDoctor),
-    url(r'^createreceptionist', createReceptionist),
+    url(r'^/createDoctor', createDoctor),
+    url(r'^/createReceptionist', createReceptionist),
 
 
     

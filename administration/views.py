@@ -40,7 +40,9 @@ def createDoctor(request):
         doc.doc_dep = doc_dep
         doc.doc_exp = doc_exp
         doc.save()   
-        
+
+        return HttpResponse("CreateDoctor success")
+
     except:
         Exception 
         return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
@@ -67,9 +69,13 @@ def createReceptionist(request):
         recp.rec_email = rec_email
         recp.rec_address = rec_address
         recp.rec_sex = rec_sex
-    
+
+        return HttpResponse("CreateReceptionist success")
+
      except:
         Exception
         return HttpResponse("" + rec_name + "\n"+ rec_mob_no +"\n" + rec_age +"\n" + rec_email +"\n" + rec_address +"\n" + rec_sex +"\n" + rec_id)
     
 
+def sample(request):
+    
