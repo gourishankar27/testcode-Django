@@ -3,6 +3,7 @@ from .models import login
 from django.http import HttpResponse
 from dummy.views import index
 from reception.views import index
+from doctors.views import index_doctor
 
 
 def index(request):
@@ -26,7 +27,9 @@ def loginusers(request):
                     return render(request,"reception/reception.html")
                 elif(types.userType == 'patient'):
                     return render(request,"dummy/login.html")
-                
+                elif(types.userType == 'doctor'):
+                    #return HttpResponse("gotodoctors page")
+                    return render(request, "doctors/index_doctors.html")
             #else:
              #   return HttpResponse("User not found")
         return HttpResponse("")
