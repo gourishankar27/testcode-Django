@@ -11,6 +11,7 @@ def gotocreatedoctor(request):
     return render(request, "administration/forms_basic_doc.html")
 
 def createDoctor(request):
+    print('fakkk')
     try:
         doc_name = request.GET.get('Name1')
         doc_mob_no  = request.GET.get('mob_no')
@@ -43,12 +44,14 @@ def createDoctor(request):
         doc.doc_exp = doc_exp
         doc.save()   
 
+        print(doc.name)
         return HttpResponse("CreateDoctor success")
         #return render(request, 'administration/forms_basic_doc.html')
 
     except:
-        Exception 
-        return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
+        Exception
+        return HttpResponse("CreateDoctor success1")
+        #return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
 
 def gotocreatereceptionist(request):
     return render(request, "administration/forms_basic_recep.html")
