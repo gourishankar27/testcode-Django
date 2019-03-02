@@ -1,26 +1,34 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from reception.models import patient
-from reception import views
+from doctors.models import Case
+from doctors import views
 
 # Create your models here.
 
 #pat_data = patient()
 
+<<<<<<< HEAD
 def index_patient(request):
     return render(request, 'patient/total-report.html')
 
 def pat_display(request):
 
+=======
+def pat_display(request):
+>>>>>>> dd067ab97bb35df4132889c1e40ee5f78ace446d
     pat_data = patient.objects.all()
     context = {
         'pat_data': pat_data
     }
+<<<<<<< HEAD
     #for id in pat_data:
         #if pat_data.id == "":
             #print "Correct!"
     #return HttpResponse("<h1>Hiii</h1>")       
     return render(request, 'patient/sample.html', context)
+=======
+    return render(request, "patient/index.html")
+>>>>>>> dd067ab97bb35df4132889c1e40ee5f78ace446d
 
     #pat_data = patient()
     #pat_name = pat_data.pat_name

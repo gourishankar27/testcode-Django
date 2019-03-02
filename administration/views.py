@@ -24,11 +24,11 @@ def createDoctor(request):
         doc_dep = request.GET.get('department')
         doc_exp = request.GET.get('year_exp')
         
-        '''sex='No value set'
+        sex='No value set'
         if(doc_sex == '1'):
             sex = 'Male'
         elif(doc_sex == '0'):
-            sex = 'Female' '''
+            sex = 'Female'
 
         doc = Doctor()
         doc.doc_name = doc_name
