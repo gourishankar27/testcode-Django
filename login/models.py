@@ -6,5 +6,4 @@ class login(models.Model):
     passWord = models.CharField(max_length = 100)
     userType = models.CharField(max_length = 30)
         
-    def __str__(self):
-        return self.loginID + ' - ' + self.userType
+    
