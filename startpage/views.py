@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, "max/startpage.html")
+    return render(request, "startpage/startpage.html")
