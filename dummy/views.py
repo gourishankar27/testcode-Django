@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import loginDetails
 from django.http import HttpResponse
 def index(request):
-    return render(request, "login.html")
+    return render(request, "dummy/login.html")
 
 def gotonext(request):
     try:
