@@ -30,11 +30,28 @@ def AddCaseView(request):
         pat.DocUploads = DocUpload
         pat.save()
 
+<<<<<<< HEAD
+=======
+        read = Case.objects.all()
+        context = {
+            'read': read
+        }
+
+        #return render(request, 'doctors/views_patient.html', context)
+        #return render(request, 'doctors/details.html')
+        return render(request, 'doctors/index_doctors.html', context)
+        #return HttpResponse(
+          #  "<h1>Data Encrypted and Stored</h1> "  "\n" + str(CaseName) + "\n" + str(CaseInfo) + "\n" + str(
+           #     Medicines) + "<h2>Click the button to return to the homepage :</h2><form action=\"/index_doctor\" method=\"GET\"><input type=\"submit\" value=\"submit\"></form>")
+>>>>>>> 8ad7ac9bd3d54c3d38812dafc41aebe2c4aec16c
 
         template = 'doctors/add-patientdetails.html'
         obj = Case.objects.all()
         context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ad7ac9bd3d54c3d38812dafc41aebe2c4aec16c
 
     except:
         Exception
@@ -60,6 +77,16 @@ def AddCaseViewButton(request):
 #  template_name = 'doctors/patient_view.html'
 
 
+<<<<<<< HEAD
+=======
+
+def ViewCaseView(request):
+    allcases = Case.objects.all()
+    context = {
+        'allcases': allcases
+    }
+
+>>>>>>> 8ad7ac9bd3d54c3d38812dafc41aebe2c4aec16c
 '''def ViewCaseView():
     template = 'doctors/add-patientdetails.html'
     obj = Case.objects.all()
@@ -68,4 +95,8 @@ def AddCaseViewButton(request):
     return render(request,template,context)   
 '''
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ad7ac9bd3d54c3d38812dafc41aebe2c4aec16c
     #return render(request, 'doctors/views_patient.html', context)
