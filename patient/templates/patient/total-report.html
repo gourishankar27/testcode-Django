@@ -379,6 +379,7 @@
                     </div>
                     <div class="header-title">
                     <form action="total-report.html#" method="get" class="sidebar-form search-box pull-right hidden-md hidden-lg hidden-sm">
+                        {% csrf_token %}
                             <div class="input-group">
                             <input type="text" name="q" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
