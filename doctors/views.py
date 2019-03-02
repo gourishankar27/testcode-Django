@@ -32,7 +32,7 @@ def AddCaseView(request):
         DocUpload = request.GET.get('doc')
         Medicines = request.GET.get('medicines')
 
-        pat = case()
+        pat = Case()
         pat.CaseName = CaseName
         pat.CaseInfo = CaseInfo
         pat.Medicines = Medicines
@@ -41,7 +41,7 @@ def AddCaseView(request):
 
 
         template = 'doctors/add-patientdetails.html'
-        obj = case.objects.all()
+        obj = Case.objects.all()
         context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
 
         return render(request,template,context)
@@ -57,11 +57,11 @@ def AddCaseView(request):
 #  template_name = 'doctors/patient_view.html'
 
 
-def ViewCaseView():
+'''def ViewCaseView():
     template = 'doctors/add-patientdetails.html'
     obj = Case.objects.all()
     context = {'casenumber': obj.CaseNumber,'casename': obj.CaseName}
     # append button will redirect to append page
     return render(request,template,context)   
-
+'''
 
