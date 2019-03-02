@@ -15,7 +15,7 @@ def loginusers(request):
         #print(""+username+"\n"+password)
         print(username)
         print(password)
-        print()
+        #print()
         logintype = login.objects.all()        
         for types in logintype:
             if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
@@ -34,6 +34,4 @@ def loginusers(request):
 
         print(Exception)
 
-
-        print(Exception)
 
