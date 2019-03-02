@@ -3,12 +3,11 @@ from .models import Doctor, Receptionist, Admin
 
 from django.http import HttpResponse
 
-
 def index(request):
     return render(request, "administration/index.html")
 
-#def gotocreatedoctor(request):
-#    return render(request, "administration/forms_basic_doc.html")
+def gotocreatedoctor(request):
+    return render(request, "administration/forms_basic_doc.html")
 
 def createDoctor(request):
     print('fakkk')

@@ -114,7 +114,7 @@
                             </a>
                             <ul class="treeview-menu">
 
-                                <form action="\createDoctor" method="GET" >
+                                <form action="" method="GET" >
                                     {% csrf_token %}
                                     <input type="submit" name="createdoctor" value="Add Doctor">
 
@@ -180,7 +180,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
-                                        <form class="col-sm-12">
+                                        <form class="col-sm-12" action="/createDoctor" method="GET">
                                             <div class="col-sm-6 form-group">
                                                 <label>Name</label>
                                                 <input type="text" name="Name1" class="form-control" placeholder="Enter Name" required>
@@ -229,7 +229,7 @@
                                             </div>
                                             <div class="col-sm-12 reset-button">
                                                  <a href="index.html" class="btn btn-warning">Reset</a>
-                                                 <a href="index.html" class="btn btn-success">Save</a>
+                                                 <input type="submit" name="save" value="Save">
                                              </div>
                                          </form>
                                      </div>
