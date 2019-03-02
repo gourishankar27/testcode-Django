@@ -114,13 +114,13 @@
                             </a>
                             <ul class="treeview-menu">
 
-                                <form action="\gotocreatedoctor" method="GET" >
+                                <form action="\createDoctor" method="GET" >
                                     {% csrf_token %}
                                     <input type="submit" name="createdoctor" value="Add Doctor">
 
                                 </form>
 
-                                <li><a href="administration/table.html#">Doctor list</a></li>
+                                <li><a href="administration/table.html">Doctor list</a></li>
 
                             </ul>
                         </li>
@@ -228,8 +228,8 @@
                                                 <input type="text" name="lic_on" class="form-control" placeholder="Enter License number" required>
                                             </div>
                                             <div class="col-sm-12 reset-button">
-                                                 <a href="forms_basic.html#" class="btn btn-warning">Reset</a>
-                                                 <a href="forms_basic.html#" class="btn btn-success">Save</a>
+                                                 <a href="index.html" class="btn btn-warning">Reset</a>
+                                                 <a href="index.html" class="btn btn-success">Save</a>
                                              </div>
                                          </form>
                                      </div>

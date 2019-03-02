@@ -31,4 +31,9 @@ def loginusers(request):
              #   return HttpResponse("User not found")
         return HttpResponse("")
     except:
+
         print(Exception)
+
+
+        print(Exception)
+
