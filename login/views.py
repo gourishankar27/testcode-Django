@@ -15,7 +15,7 @@ def loginusers(request):
         #print(""+username+"\n"+password)
         print(username)
         print(password)
-        print()
+        #print()
         logintype = login.objects.all()        
         for types in logintype:
             if(str(types.loginId) == str(username) and str(types.passWord) == str(password)):
@@ -32,5 +32,8 @@ def loginusers(request):
             #else:
              #   return HttpResponse("User not found")
         return HttpResponse("")
-    except Exception as e:
-        print(e)
+    except:
+
+        print(Exception)
+
+
