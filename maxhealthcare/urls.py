@@ -21,12 +21,19 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
+    path('login/', include('login.urls')),
     path('', include('reception.urls')),
+    path('', include('dummy.urls')),
     path('', include('administration.urls')),
     path('', include ('doctors.urls')),
     path('', include('login.urls')),
+<<<<<<< HEAD
     url(r'^patient/', include('patient.urls')),
     
     #path('', )
+=======
+    path('', include('startpage.urls')),
+    #url(r'^sample/', include('administration.urls')),
+>>>>>>> 24458e7dae47b88556b0d13c4ced327b7b0d29d5
 
 ]

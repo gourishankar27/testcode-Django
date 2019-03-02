@@ -2,40 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    { % load staticfiles % }
+    % load staticfiles %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>MAX HEALTH CARE</title>
 
     <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="{ % static 'administration/assets/dist/img/ico/favicon.png' % }" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'administration/assets/dist/img/ico/favicon.png' %}" type="image/x-icon">
     
 
         <!-- Start Global Mandatory Style
         =====================================================================-->
         <!-- jquery-ui css -->
-        <link href="{ % static 'administration/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap -->
-        <link href="{ % static 'administration/assets/bootstrap/css/bootstrap.min.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap rtl -->
         <!--<link href="assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
         <!-- Lobipanel css -->
-        <link href="{ % static 'administration/assets/plugins/lobipanel/lobipanel.min.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/plugins/lobipanel/lobipanel.min.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Pace css -->
-        <link href="{ % static 'administration/assets/plugins/pace/flash.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/plugins/pace/flash.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Font Awesome -->
-        <link href="{ % static 'administration/assets/font-awesome/css/font-awesome.min.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Pe-icon -->
-        <link href="{ % static 'administration/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Themify icons -->
-        <link href="{ % static 'administration/assets/themify-icons/themify-icons.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/themify-icons/themify-icons.css' %}" rel="stylesheet" type="text/css"/>
         <!-- End Global Mandatory Style
         =====================================================================-->
         <!-- Start Theme Layout Style
         =====================================================================-->
         <!-- Theme style -->
-        <link href="{ % static 'administration/assets/dist/css/stylehealth.min.css' % }" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'administration/assets/dist/css/stylehealth.min.css' %}" rel="stylesheet" type="text/css"/>
         <!-- Theme style rtl -->
         <!--<link href="assets/dist/css/stylehealth-rtl.css" rel="stylesheet" type="text/css"/>-->
         <!-- End Theme Layout Style
@@ -48,11 +48,11 @@
                 <a href="index.html" class="logo"> <!-- Logo -->
                     <span class="logo-mini">
                         <!--<b>A</b>BD-->
-                        <img src="{ % static 'administration/assets/dist/img/mini-logo.png' %}" alt="">
+                        <img src="{% static 'administration/assets/dist/img/mini-logo.png' %}" alt="">
                     </span>
                     <span class="logo-lg">
                         <!--<b>Admin</b>BD-->
-                        <img src="{ % static 'administration/assets/dist/img/logo.png' % }" alt="">
+                        <img src="{% static 'administration/assets/dist/img/logo.png' %}" alt="">
                     </span>
                 </a>
                 <!-- Header Navbar -->
@@ -70,7 +70,7 @@
                                             <li class="dropdown dropdown-user admin-user">
                                                 <a href="table.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                                     <div class="user-image">
-                                                        <img src="{ % static 'administration/assets/dist/img/avatar4.png ' % }" class="img-circle" height="40" width="40" alt="User Image">
+                                                        <img src="{% static 'administration/assets/dist/img/avatar4.png ' %}" class="img-circle" height="40" width="40" alt="User Image">
                                                     </div>
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -91,7 +91,7 @@
                                     <!-- Sidebar user panel -->
                                     <div class="user-panel">
                                         <div class="image pull-left">
-                                            <img src="{ % static 'administration/assets/dist/img/avatar5.png' % }" class="img-circle" alt="User Image">
+                                            <img src="{% static 'administration/assets/dist/img/avatar5.png' %}" class="img-circle" alt="User Image">
                                         </div>
                                         <div class="info">
                                             <h4>Welcome</h4>
@@ -167,7 +167,7 @@
                                 <div class="panel panel-bd lobidrag">
                                     <div class="panel-heading">
                                         <div class="btn-group"> 
-                                            <a class="btn btn-success" href="forms_basic.html"> <i class="fa fa-plus"></i> Add Doctor
+                                            <a class="btn btn-success" href="forms_basic_doc.html"> <i class="fa fa-plus"></i> Add Doctor
                                             </a>  
                                         </div>        
                                     </div>
@@ -272,7 +272,7 @@
                                                 <td><input type="radio" name="radioGroup">
                                                    <label>3</label>   
                                                </td>
-                                               <td><img src="{ % static 'administration/assets/dist/img/d3.png'% }" class="img-circle" alt="User Image" height="50" width="50"></td>
+                                               <td><img src="{% static 'administration/assets/dist/img/d3.png'%}" class="img-circle" alt="User Image" height="50" width="50"></td>
                                                <td>Alimul</td>
                                                <td>alrazy</td>
                                                <td>Neurology</td>
@@ -291,7 +291,7 @@
                                             <td><input type="radio" name="radioGroup">
                                                <label>4</label>   
                                            </td>
-                                           <td><img src="{ % static 'administration/assets/dist/img/d2.png' % }" class="img-circle" alt="User Image" height="50" width="50"></td>
+                                           <td><img src="{% static 'administration/assets/dist/img/d2.png' %}" class="img-circle" alt="User Image" height="50" width="50"></td>
                                            <td>Alimul</td>
                                            <td>alrazy</td>
                                            <td>Neurology</td>
@@ -311,7 +311,7 @@
                                        <td><input type="radio" name="radioGroup">
                                            <label>5</label>   
                                        </td>
-                                       <td><img src="{ % static 'administration/assets/dist/img/d4.png' % }" class="img-circle" alt="User Image" height="50" width="50"></td>
+                                       <td><img src="{% static 'administration/assets/dist/img/d4.png' %}" class="img-circle" alt="User Image" height="50" width="50"></td>
                                        <td>Alimul</td>
                                        <td>alrazy</td>
                                        <td>Neurology</td>
@@ -477,36 +477,35 @@
 </div>
 
 </div> <!-- /.content-wrapper -->
-<footer class="main-footer text-center">
-    <div class="pull-right hidden-xs"> <b>Version</b> 1.0</div>
-    <strong>Copyright &copy; 2016-2017 <a href="table.html#">Thememinister</a>.</strong> All rights reserved.
-</footer>
+<footer class="main-footer">
+                    <div class="pull-right hidden-xs"> <b>Version</b>MIT</div>
+                </footer>
 </div> <!-- ./wrapper -->
 <!-- ./wrapper -->
         <!-- Start Core Plugins
         =====================================================================-->
         <!-- jQuery -->
-        <script data-cfasync="false" src="{ % static 'administration/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' % }"></script><script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <script data-cfasync="false" src="{% static 'administration/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
         <!-- jquery-ui --> 
-        <script src="{ % static 'administration/a{ % static 'administration/ssets/plugins/jquery-ui-1.12.1/jquery-ui.min.j' % }" type="text/javascript"></script>
+        <script src="{% static 'administration/ssets/plugins/jquery-ui-1.12.1/jquery-ui.min.j' %}" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="{ % static 'administration/assets/bootstrap/js/bootstrap.min.js '% }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/bootstrap/js/bootstrap.min.js '%}" type="text/javascript"></script>
         <!-- lobipanel -->
-        <script src="{ % static 'administration/assets/plugins/lobipanel/lobipanel.min.js '% }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/plugins/lobipanel/lobipanel.min.js '%}" type="text/javascript"></script>
         <!-- Pace js -->
-        <script src="{ % static 'administration/assets/plugins/pace/pace.min.js '% }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/plugins/pace/pace.min.js '%}" type="text/javascript"></script>
         <!-- SlimScroll -->
-        <script src="{ % static 'administration/assets/plugins/slimScroll/jquery.slimscroll.min.js '% }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/plugins/slimScroll/jquery.slimscroll.min.js '%}" type="text/javascript"></script>
         <!-- FastClick -->
-        <script src="{ % static 'administration/assets/plugins/fastclick/fastclick.min.js ' % }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/plugins/fastclick/fastclick.min.js ' %}" type="text/javascript"></script>
         <!-- Hadmin frame -->
-        <script src="{ % static 'administration/assets/dist/js/custom1.js' %  }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/dist/js/custom1.js' %}" type="text/javascript"></script>
         <!-- End Core Plugins
         =====================================================================-->
         <!-- Start Theme label Script
         =====================================================================-->
         <!-- Dashboard js -->
-        <script src="{ % static 'administration/assets/dist/js/custom.js' % }" type="text/javascript"></script>
+        <script src="{% static 'administration/assets/dist/js/custom.js' %}" type="text/javascript"></script>
         <!-- End Theme label Script
         =====================================================================-->
     </body>
