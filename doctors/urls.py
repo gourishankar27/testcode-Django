@@ -16,8 +16,10 @@ app_name = 'doctors'
 from doctors.views import index,AddCaseView
 
 urlpatterns = [
-    url(r'^index/' , index),
+    url(r'^AddCaseViewButton/', AddCaseViewButton),
+    url(r'^index_doctor/', index_doctor),
     url(r'^AddCaseView/', AddCaseView),
     #url(r'^ViewCaseView/', ViewCaseView),
+
 
 ]
