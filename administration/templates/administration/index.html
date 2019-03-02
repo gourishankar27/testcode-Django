@@ -120,7 +120,13 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="administration/forms_basic_doc.html#">Add Doctor</a></li>
+
+                                <form action="\gotocreatedoctor" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createdoctor" value="Add Doctor">
+
+                                </form>
+
                                 <li><a href="administration/table.html#">Doctor list</a></li>
                                 
                             </ul>
@@ -133,7 +139,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="administration/forms_basic_recep.html">Add receptionist</a></li>
+                                 <form action="\gotocreatereceptionist" method="GET" >
+                                    {% csrf_token %}
+                                    <input type="submit" name="createreceptionist" value="Add Receptionist">
+
+                                </form>
                                 <li><a href="administration/table.html">Receptionist list</a></li>
                             </ul>
                         </li>
@@ -290,7 +300,8 @@
                                 </div>
                             </div>
                          </div>
-                    </div> <!-- /.row -->
+                    </div>
+
                 </section> <!-- /.content -->
 
             </div> <!-- /.content-wrapper -->
