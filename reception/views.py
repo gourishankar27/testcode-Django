@@ -13,11 +13,6 @@ import hashlib
 def index(request):
     return render(request, "reception/reception.html")
 
-
-
-       
-
-
 def createPatient(request):
     try:
         firstName = request.GET.get('firstName')
@@ -88,6 +83,7 @@ def createPatient(request):
                         for post in posts:
                             print(post.pat_name)
                         '''
+                        return render(request,'reception/reception.html')
         except Exception as e:
             print(e)               
     except Exception as e:
