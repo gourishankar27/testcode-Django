@@ -3,6 +3,7 @@ from .models import login
 from django.http import HttpResponse
 from dummy.views import index
 from reception.views import index
+from doctors.views import index_doctor
 import hashlib
 
 
@@ -33,10 +34,13 @@ def loginusers(request):
                 elif(types.userType == 'patient'):
                     print("Patient")
                     return render(request,"dummy/login.html")
+                elif(types.userType == 'doctor'):
+                    print("Doctor")
+                    return render(request,"doctors/add-case.html")
                 
             #else:
              #   return HttpResponse("User not found")
-        return HttpResponse("")
+        return HttpResponse(" Entered Username or password is incorrect. ")
     except:
 
         print(Exception)

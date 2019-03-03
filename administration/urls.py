@@ -10,7 +10,7 @@ urlpatterns = [
     #url(r'^$', sample),
     url(r'^administration/$', index),
     url(r'^createDoctor/', createDoctor),
-    url(r'^administration/createReceptionist/', createReceptionist),
+    url(r'^createReceptionist/', createReceptionist),
     url(r'^gotocreatedoctor/', gotocreatedoctor),
     url(r'^gotocreatereceptionist/',gotocreatereceptionist),
     url(r'^email/',email),

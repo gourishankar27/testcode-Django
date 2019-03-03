@@ -60,12 +60,66 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-         
-          <li class="nav-item active"><a href="departments.html" class="nav-link">Departments</a></li>
-          <li class="nav-item"><a href="doctor.html" class="nav-link">Doctors</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item cta"><a href="login.html" class="nav-link"><span>Login</span></a></li>
+          <li class="nav-item active">
+          
+          <!--<a href="index.html" class="nav-link">Home</a></li>-->
+
+          <form action="\gotohome" method="GET" >
+          {% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+          <input type="submit" name="HOME" value="HOME" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+          </form></li>
+          
+          <li class="nav-item">
+          
+          <!--<a href="about.html" class="nav-link">About</a></li>-->
+
+          <form action="\gotoabout" method="GET" >
+          {% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+          <input type="submit" name="ABOUT" value="ABOUT" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+          </form></li>
+          
+          <!--<li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>-->
+           <li class="nav-item">
+          <form action="\gotodepartments" method="GET" >
+          {% csrf_token %}
+          <br><br>
+          <div class="panel-body">
+          <p class="m-b-15">
+          <input type="submit" name="DEPARTMENTS" value="DEPARTMENTS" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+          </form></li>
+
+          <!--<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
+          <li class="nav-item">
+          <form action="\gotocontacts" method="GET">
+          {% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+          <input type="submit" name="CONTACTS" value="CONTACTS" class="btn btn-purple w-md m-b-5">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          </p></div>
+          </form></li>
+
+          <li class="nav-item cta">
+          
+          
+          <form action="\gotologin" method="GET" >
+          {% csrf_token %}
+          <br><br>
+           <div class="panel-body">
+          <p class="m-b-15">
+          <input type="submit" name="login" value="LOGIN" class="btn btn-purple w-md m-b-5">&ensp;
+          </p></div>
+          </form>
+          </li>
         </ul>
       </div>
     </div>

@@ -13,7 +13,7 @@ from django.views import generic\
 #from .forms import UserForm
 
 def index_doctor(request):
-    return render(request, "doctors/index_doctors.html")
+    return render(request, "doctors/add-case.html")
 
 def gotoAddCaseView(request):
     return render(request, 'doctors/add-patientdetails.html')
@@ -25,6 +25,7 @@ def AddCaseView(request):
         CaseInfo = request.GET.get('diagnostic')
         DocUpload = request.GET.get('picture')
         Medicines = request.GET.get('medicines')
+        #print(case_name+dignostic)
         try:
 
             pat = Case()
