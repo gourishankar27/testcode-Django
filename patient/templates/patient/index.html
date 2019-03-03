@@ -118,9 +118,14 @@
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
-                            </a>
+                            </a></li>
                             <ul class="treeview-menu">
-                                <li><a href="table.html">Personal Details</a></li>
+                                <li><form action="table.html" method="get">
+                                    {% csrf_token %}
+                                    <input type="submit" name="view_button" value="Personal Details">
+                                </form>
+                               <!--<a href="table.html">Personal Details</a>-->
+                           </li>
                             </ul>
                          </li>
                         <li class="treeview">
@@ -129,9 +134,13 @@
                               <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                             </span>
-                        </a>
+                        </a></li>
                         <ul class="treeview-menu">
-                            <li><a href="total-report.html">Total Report</a></li>
+                            <li><!--<a href="total-report.html">Total Report</a></li>-->
+                                <form action="total-report.html" method="get">
+                                    {% csrf_token %}
+                                    <input type="submit" name="view_button" value="View Details">
+                                </form>
                         </ul>
                     </li>     
                 </ul>        
