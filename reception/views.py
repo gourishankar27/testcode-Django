@@ -83,6 +83,7 @@ def createPatient(request):
                         for post in posts:
                             print(post.pat_name)
                         '''
+                        return render(request,'reception/reception.html')
         except Exception as e:
             print(e)               
     except Exception as e:

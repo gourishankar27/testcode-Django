@@ -36,7 +36,7 @@ def loginusers(request):
                     return render(request,"dummy/login.html")
                 elif(types.userType == 'doctor'):
                     print("Doctor")
-                    return render(request,"doctors/index_doctors.html")
+                    return render(request,"doctors/add-case.html")
                 
             #else:
              #   return HttpResponse("User not found")
