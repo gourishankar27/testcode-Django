@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Doctor, Receptionist, Admin
-
+import re
+from django.conf import settings
 from django.http import HttpResponse
+from django.core.mail import send_mail
 
 def index(request):
     return render(request, "administration/index.html")
@@ -81,8 +83,8 @@ def createReceptionist(request):
 
         return HttpResponse("CreateReceptionist success")
 
-     except:
-        Exception
+     except Exception as e:
+        print(e)
         return HttpResponse("" + rec_name + "\n"+ rec_mob_no +"\n" + rec_age +"\n" + rec_email +"\n" + rec_address +"\n" + '''rec_sex +''' "\n" + rec_id)
     
 
@@ -92,3 +94,26 @@ def sample(request):
 
 def email(request):
     return render(request,'administration/email.html')
+
+def sendmail(request):
+    email = request.GET.get('emailID')
+    subject = request.GET.get('subject')
+    body = request.GET.get('body')
+    if(email != ""):
+        print("send mail")
+        domain = email.split('@')[1]
+        if domain == "code9.com":
+            print("Verified requester")
+            try:
+                subject = 'Mail within the domain '+subject
+                message = ' The email can be only sent to users within domain '+body
+                email_from = settings.EMAIL_HOST_USER
+                recipient_list = [''+email, ]
+                send_mail(subject, message, email_from, recipient_list)
+            except Exception as e:
+                print(e)
+        else:
+            print("un-Verified user")
+            return HttpResponse("unverified user")
+    else:
+        return HttpResponse("please enter email and try again")

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import include,path
 from django.conf.urls import url,include
 from django.conf.urls import url
-from administration.views import index,createDoctor,createReceptionist, gotocreatedoctor ,gotocreatereceptionist,email
+from administration.views import index,createDoctor,createReceptionist, gotocreatedoctor ,gotocreatereceptionist,email, sendmail
 
 
 
@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^gotocreatedoctor/', gotocreatedoctor),
     url(r'^gotocreatereceptionist/',gotocreatereceptionist),
     url(r'^email/',email),
+    url(r'^sendmail/',sendmail),
 
 ]
