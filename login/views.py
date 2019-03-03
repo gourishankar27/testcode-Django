@@ -33,12 +33,10 @@ def loginusers(request):
                 elif(types.userType == 'patient'):
                     print("Patient")
                     return render(request,"dummy/login.html")
-                elif(types.userType == 'doctor'):
-                    #return HttpResponse("gotodoctors page")
-                    return render(request, "doctors/index_doctors.html")
+                
             #else:
              #   return HttpResponse("User not found")
-        return HttpResponse("Username or password is incorrect")
+        return HttpResponse("")
     except:
 
         print(Exception)
