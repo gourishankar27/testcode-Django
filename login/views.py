@@ -38,7 +38,7 @@ def loginusers(request):
                     return render(request, "doctors/index_doctors.html")
             #else:
              #   return HttpResponse("User not found")
-        return HttpResponse("")
+        return HttpResponse("Username or password is incorrect")
     except:
 
         print(Exception)
