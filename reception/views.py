@@ -13,11 +13,6 @@ import hashlib
 def index(request):
     return render(request, "reception/reception.html")
 
-
-
-       
-
-
 def createPatient(request):
     try:
         firstName = request.GET.get('firstName')

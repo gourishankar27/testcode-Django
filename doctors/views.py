@@ -25,6 +25,7 @@ def AddCaseView(request):
         CaseInfo = request.GET.get('diagnostic')
         DocUpload = request.GET.get('picture')
         Medicines = request.GET.get('medicines')
+        #print(case_name+dignostic)
         try:
 
             pat = Case()

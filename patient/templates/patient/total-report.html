@@ -330,8 +330,12 @@
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
-                            </a>
+                            <form action="index.html" method="get">
+                                    {% csrf_token %}
+                                    <input type="submit" name="view_button" value="Dashboard">
+                                </form>
+                           <!-- <a href="index.html"><i class="fa fa-hospital-o"></i><span>Dashboard</span>
+                            </a>-->
                         </li>
                         <li class="treeview">
                             <a href="index.html#">
@@ -341,7 +345,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="table.html">Personal Details</a></li>
+                                <form action="table.html" method="get">
+                                    {% csrf_token %}
+                                    <input type="submit" name="view_button" value="Personal Details">
+                                </form>
+                                <!--<li><a href="table.html">Personal Details</a></li>-->
                             </ul>
                          </li>
                         <li class="treeview">
@@ -352,18 +360,11 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="total-report.html">Total Report</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="index.html#">
-                            <i class="fa fa-file-text-o"></i><span>Notice</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="not-list.html">Notice list</a></li>
+                            <form action="total-report.html" method="get">
+                                    {% csrf_token %}
+                                    <input type="submit" name="view_button" value="Total Report">
+                                </form>
+                            <!--<li><a href="total-report.html">Total Report</a></li>-->
                         </ul>
                     </li>      
             </ul>
