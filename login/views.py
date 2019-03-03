@@ -40,7 +40,7 @@ def loginusers(request):
                 
             #else:
              #   return HttpResponse("User not found")
-        return HttpResponse(" Entered Username or password is incorrect ")
+        return HttpResponse(" Entered Username or password is incorrect. ")
     except:
 
         print(Exception)
