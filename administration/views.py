@@ -8,6 +8,7 @@ from login.models import login
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.mail import EmailMessage
+import hashlib
 
 
 def index(request):
@@ -74,10 +75,12 @@ def createDoctor(request):
                             send_mail( subject, message, email_from, recipient_list )
                         except Exception as e:
                             print(e)
+                        enc_uname1 = hashlib.sha256(doc_mob_no.encode("utf-8")).hexdigest()
+                        enc_passs1 = hashlib.sha256(password.encode("utf-8")).hexdigest()
 
                         log = login()
-                        log.loginId = doc_mob_no
-                        log.passWord = password
+                        log.loginId = enc_uname1
+                        log.passWord = enc_passs1
                         log.userType = 'doctor'
                         log.save()
 
@@ -91,7 +94,7 @@ def createDoctor(request):
             print(e)               
     except Exception as e:
         print(e)
-        
+    return HttpResponse("done with the file")   
     #return HttpResponse("" + doc_name +  "\n"+ doc_dep + "\n" + doc_mob_no + "\n" + doc_email + "\n" + "Doctor Id: 1234567" + "\n" + doc_address + "\n" + doc_age +  "\n")
 
 def gotocreatereceptionist(request):
@@ -147,9 +150,12 @@ def createReceptionist(request):
                         except Exception as e:
                             print(e)
 
+                        enc_uname2 = hashlib.sha256(rec_doc_mob.encode("utf-8")).hexdigest()
+                        enc_passs2 = hashlib.sha256(password.encode("utf-8")).hexdigest()
+
                         log = login()
-                        log.loginId = rec_mob_no
-                        log.passWord = password
+                        log.loginId = enc_uname2
+                        log.passWord = enc_passs2
                         log.userType = 'reception'
                         log.save()
 
