@@ -11,6 +11,10 @@ def pat_display(request):
     context = {
         'pat_data': pat_data
     }
+    x=0
+    for obj in pat_data:
+        x=x+1
+    
     return render(request, "patient/sample.html", context)
 
     #pat_data = patient()
