@@ -24,11 +24,11 @@ def createDoctor(request):
         doc_dep = request.GET.get('department')
         doc_exp = request.GET.get('year_exp')
         
-        sex='No value set'
+        '''sex='No value set'
         if(doc_sex == '1'):
             sex = 'Male'
         elif(doc_sex == '0'):
-            sex = 'Female'
+            sex = 'Female' '''
 
         doc = Doctor()
         doc.doc_name = doc_name
@@ -89,3 +89,6 @@ def createReceptionist(request):
 def sample(request):
     return render(request, 'administration/forms_basic_doc.html')
     #return HttpResponse("Hey!")
+
+def email(request):
+    return render(request,'administration/email.html')
