@@ -9,32 +9,32 @@
         <title>MAX HEALTH CARE</title>
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="{% static 'patient/assets/dist/img/ico/favicon.png' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static 'patient/assets/dist/img/ico/favicon.png'%}" type="image/x-icon">
        
         <!-- Start Global Mandatory Style
         =====================================================================-->
         <!-- jquery-ui css -->
-        <link href="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap -->
-        <link href="{% static 'patient/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap rtl -->
         <!--<link href="patient/assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
         <!-- Lobipanel css -->
-        <link href="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Pace css -->
-        <link href="{% static 'patient/assets/plugins/pace/flash.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/plugins/pace/flash.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Font Awesome -->
-        <link href="{% static 'patient/assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Pe-icon -->
-        <link href="{% static 'patient/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Themify icons -->
-        <link href="{% static 'patient/assets/themify-icons/themify-icons.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/themify-icons/themify-icons.css'%}" rel="stylesheet" type="text/css"/>
         <!-- End Global Mandatory Style
         =====================================================================-->
         <!-- Start Theme Layout Style
         =====================================================================-->
         <!-- Theme style -->
-        <link href="{% static 'patient/assets/dist/css/stylehealth.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'patient/assets/dist/css/stylehealth.min.css'%}" rel="stylesheet" type="text/css"/>
         <!-- Theme style rtl -->
         <!--<link href="patient/assets/dist/css/stylehealth-rtl.css" rel="stylesheet" type="text/css"/>-->
         <!-- End Theme Layout Style
@@ -47,11 +47,11 @@
                 <a href="index.html" class="logo"> <!-- Logo -->
                     <span class="logo-mini">
                         <!--<b>A</b>BD-->
-                        <img src="{% static 'patient/assets/dist/img/mini-logo.png' %}" alt="">
+                        <img src="{% static 'patient/assets/dist/img/mini-logo.png'%}" alt="">
                     </span>
                     <span class="logo-lg">
                         <!--<b>Admin</b>BD-->
-                        <img src="{% static 'patient/assets/dist/img/logo.png' %}" alt="">
+                        <img src="{% static 'patient/assets/dist/img/logo.png'%}" alt="">
                     </span>
                 </a>
                 <!-- Header Navbar -->
@@ -76,7 +76,7 @@
                                             <li ><!-- start Notifications -->
                                              <a href="total-report.html#" class="border-gray">
                                                 <div class="pull-left">
-                                                <img src="{% static 'patient/assets/dist/img/stethescope.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                <img src="{% static 'patient/assets/dist/img/stethescope.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                 <h4>stethescope</h4>
                                                 <p><strong>total item:</strong> 21
                                                 </p>
@@ -85,7 +85,7 @@
                                         <li>
                                             <a href="total-report.html#" class="border-gray">
                                                 <div class="pull-left">
-                                                    <img src="{% static 'patient/assets/dist/img/nocontrol.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/assets/dist/img/nocontrol.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Nocontrol</h4>
                                                     <p><strong>total item:</strong> 11
                                                     </p>
@@ -94,7 +94,7 @@
                                             <li>
                                                 <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                        <img src="{% static 'patient/assets/dist/img/lab.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                        <img src="{% static 'patient/assets/dist/img/lab.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                         <h4>lab</h4>
                                                         <p><strong>total item:</strong> 16
                                                         </p>
@@ -103,7 +103,7 @@
                                                 <li class="nav-list">
                                                     <a href="total-report.html#" class="border-gray">
                                                         <div class="pull-left">
-                                                            <img src="{% static 'patient/assets/dist/img/therm.jpg' %}" class="img-thumbnail" alt="User Image"></div>
+                                                            <img src="{% static 'patient/assets/dist/img/therm.jpg'%}" class="img-thumbnail" alt="User Image"></div>
                                                             <h4>Pressure machine</h4>
                                                             <p><strong>total item:</strong> 10
                                                             </p>
@@ -129,7 +129,7 @@
                                             <li><!-- start message -->
                                                <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                    <img src="{% static 'patient/dist/img/avatar2.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/dist/img/avatar2.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Alrazy</h4>
                                                     <p>Lorem Ipsum is simply dummy text of...
                                                     </p>
@@ -140,7 +140,7 @@
                                             <li>
                                                 <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                    <img src="{% static 'patient/assets/dist/img/avatar4.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/assets/dist/img/avatar4.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Tanjil</h4>
                                                     <p>Lorem Ipsum is simply dummy text of...
                                                     </p>
@@ -151,7 +151,7 @@
                                             <li>
                                                 <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                    <img src="{% static 'patient/assets/dist/img/avatar3.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/assets/dist/img/avatar3.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Jahir</h4>
                                                     <p>Lorem Ipsum is simply dummy text of...
                                                     </p>
@@ -162,7 +162,7 @@
                                             <li>
                                                <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                    <img src="{% static 'patient/assets/dist/img/avatar4.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/assets/dist/img/avatar4.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Shawon</h4>
                                                     <p>Lorem Ipsum is simply dummy text of...
                                                     </p>
@@ -173,7 +173,7 @@
                                             <li>
                                                 <a href="total-report.html#" class="border-gray">
                                                     <div class="pull-left">
-                                                    <img src="{% static 'patient/assets/dist/img/avatar3.png' %}" class="img-thumbnail" alt="User Image"></div>
+                                                    <img src="{% static 'patient/assets/dist/img/avatar3.png'%}" class="img-thumbnail" alt="User Image"></div>
                                                     <h4>Shipon</h4>
                                                     <p>Lorem Ipsum is simply dummy text of...
                                                     </p>
@@ -298,7 +298,7 @@
                             <li class="dropdown dropdown-user admin-user">
                                 <a href="total-report.html#" class="dropdown-toggle" data-toggle="dropdown"> 
                                 <div class="user-image">
-                                <img src="{% static 'patient/assets/dist/img/avatar4.png' %}" class="img-circle" height="40" width="40" alt="User Image">
+                                <img src="{% static 'patient/assets/dist/img/avatar4.png'%}" class="img-circle" height="40" width="40" alt="User Image">
                                 </div>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -319,7 +319,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="image pull-left">
-                            <img src="{% static 'patient/assets/dist/img/avatar5.png' %}" class="img-circle" alt="User Image">
+                            <img src="{% static 'patient/assets/dist/img/avatar5.png'%}" class="img-circle" alt="User Image">
                         </div>
                         <div class="info">
                             <h4>Welcome</h4>
@@ -475,27 +475,27 @@
         <!-- Start Core Plugins
         =====================================================================-->
         <!-- jQuery -->
-        <script src="{% static 'patient/assets/plugins/jQuery/jquery-1.12.4.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/jQuery/jquery-1.12.4.min.js'%}" type="text/javascript"></script>
         <!-- jquery-ui --> 
-        <script src="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js'%}" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="{% static 'patient/assets/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/bootstrap/js/bootstrap.min.js'%}" type="text/javascript"></script>
         <!-- lobipanel -->
-        <script src="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/lobipanel/lobipanel.min.js'%}" type="text/javascript"></script>
         <!-- Pace js -->
-        <script src="{% static 'patient/assets/plugins/pace/pace.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/pace/pace.min.js'%}" type="text/javascript"></script>
         <!-- SlimScroll -->
-        <script src="{% static 'patient/assets/plugins/slimScroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/slimScroll/jquery.slimscroll.min.js'%}" type="text/javascript"></script>
         <!-- FastClick -->
-        <script src="{% static 'patient/assets/plugins/fastclick/fastclick.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/plugins/fastclick/fastclick.min.js'%}" type="text/javascript"></script>
         <!-- Hadmin frame -->
-        <script src="{% static 'patient/assets/dist/js/custom1.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/dist/js/custom1.js'%}" type="text/javascript"></script>
         <!-- End Core Plugins
         =====================================================================-->
         <!-- Start Theme label Script
         =====================================================================-->
         <!-- Dashboard js -->
-        <script src="{% static 'patient/assets/dist/js/custom.js' %}" type="text/javascript"></script>
+        <script src="{% static 'patient/assets/dist/js/custom.js'%}" type="text/javascript"></script>
         <!-- End Theme label Script
         =====================================================================-->
     </body>

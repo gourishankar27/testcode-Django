@@ -2,8 +2,15 @@ from django.shortcuts import render
 from .models import Doctor, Receptionist, Admin
 import re
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
+from django.contrib import messages
 from django.core.mail import send_mail
+import csv
+from django.utils.encoding import smart_str
+from Crypto.Cipher import AES
+import base64
+
+MASTER_KEY="0))5i+u9$ec0r9*4!o_k5p8k)y+bule0"
 
 def index(request):
     return render(request, "administration/index.html")
@@ -26,11 +33,11 @@ def createDoctor(request):
         doc_dep = request.GET.get('department')
         doc_exp = request.GET.get('year_exp')
         
-        sex='No value set'
+        '''sex='No value set'
         if(doc_sex == '1'):
             sex = 'Male'
         elif(doc_sex == '0'):
-            sex = 'Female'
+            sex = 'Female' '''
 
         doc = Doctor()
         doc.doc_name = doc_name
@@ -102,14 +109,16 @@ def sendmail(request):
     if(email != ""):
         print("send mail")
         domain = email.split('@')[1]
-        if domain == "code9.com":
+        if domain == "gmail.com":
             print("Verified requester")
+            download_csv_data(request)
             try:
                 subject = 'Mail within the domain '+subject
                 message = ' The email can be only sent to users within domain '+body
                 email_from = settings.EMAIL_HOST_USER
                 recipient_list = [''+email, ]
                 send_mail(subject, message, email_from, recipient_list)
+                return HttpResponse("mail sent successfully")
             except Exception as e:
                 print(e)
         else:
@@ -117,3 +126,85 @@ def sendmail(request):
             return HttpResponse("unverified user")
     else:
         return HttpResponse("please enter email and try again")
+def download_csv_data(request):
+    # response content type
+    try:
+        print("inside download csv")
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+        writer = csv.writer(response)
+        writer.writerow([encrypt_val("First row"), encrypt_val('Foo'), encrypt_val('Bar'), encrypt_val('Baz')])
+        writer.writerow([encrypt_val("Second row"), encrypt_val('A'), encrypt_val('B'), encrypt_val('C'), encrypt_val("Testing"),encrypt_val( "Here's a quote")])
+        print("response here")
+        return response
+
+    except Exception as e:
+        print(e)
+
+
+def encrypt_val(clear_text):
+    '''
+    enc_secret = AES.new(MASTER_KEY[:32])
+    tag_string = (str(clear_text) +
+                  (AES.block_size -
+                   len(str(clear_text)) % AES.block_size) * "\0")
+    cipher_text = base64.b64encode(enc_secret.encrypt(tag_string))
+
+    return cipher_text
+    '''
+    '''
+    obj = AES.new(MASTER_KEY, AES.MODE_CFB, 'This is an IV456')
+    message = clear_text
+    ciphertext = obj.encrypt(message)
+    return ciphertext
+    '''
+    encryption_suite = AES.new(MASTER_KEY, AES.MODE_CFB, 'This is an IV456')
+    cipher_text = encryption_suite.encrypt("A really secret message. Not for prying eyes.")
+    return cipher_text
+
+
+def decrypt_val(cipher_text):
+    '''
+    dec_secret = AES.new(MASTER_KEY[:32])
+    raw_decrypted = dec_secret.decrypt(base64.b64decode(cipher_text))
+    clear_val = raw_decrypted.decode().rstrip("\0")
+    return clear_val
+    '''
+    '''
+    obj = AES.new(MASTER_KEY, AES.MODE_CFB, 'This is an IV456')
+    stt = obj.decrypt(cipher_text)
+    return stt
+    '''
+    decryption_suite = AES.new(MASTER_KEY, AES.MODE_CFB, 'This is an IV456')
+    plain_text = decryption_suite.decrypt(cipher_text)
+    return plain_text
+    
+def upload_csv(request):
+    data = {}
+    try:
+        csv_file = request.FILES["csv_file"]
+        if not csv_file.name.endswith('.csv'):
+            return HttpResponseRedirect("file selected was not csv")
+        
+        file_data = csv_file.read().decode("utf-8")		
+        temp=""
+        cnt = 0
+        #loop over the lines and save them in db. If error , store as string and then display
+        #temp = file_data.split(',')
+        for line in file_data:	
+            #while(line != ','):
+            if(line == ','):
+                print(temp)
+                print(cnt)
+                print(decrypt_val(temp))
+                temp = ""
+                cnt = 0
+            else:
+                temp += line
+                cnt += 1
+        return HttpResponse("data read is at the end and the data is ")
+    except Exception as e:
+        print(e)
+
+    return HttpResponseRedirect("")
