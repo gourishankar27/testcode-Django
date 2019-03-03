@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='patient',
+            model_name='patient1',
             name='pat_gender',
             field=models.CharField(default=1, max_length=10),
             preserve_default=False,

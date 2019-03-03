@@ -11,7 +11,7 @@ class patient(models.Model):
     pat_mon_no = models.CharField(max_length=12)
     pat_address = models.CharField(max_length = 1000)
     pat_age = models.CharField(max_length = 4)
-    pat_gender = models.CharField(max_length = 10)
+    #pat_gender = models.CharField(max_length = 10)
     
     def __str__(self):
         return self.pat_name + ' - ' + self.pat_id

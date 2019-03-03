@@ -4,16 +4,17 @@ from reception.models import patient
 from doctors import views
 
 def index(request):
-    return render(request, 'patient/index.html')
+    return render(request, 'patient1/index.html')
 
 def pat_display(request):
     pat_data = patient.objects.all()
     context = {
         'pat_data': pat_data
     }
-    count_male = 0
-    count_female = 0
-    patient_id = '81'
+    return render(request, 'patient1/sample.html', context)
+    #count_male = 0
+    #count_female = 0
+    #patient_id = '81'
     '''for pt in pat_data:
        # if(pt.pat_gender == 'Male'):
         if(pt.id == patient_id ):
@@ -34,9 +35,8 @@ def pat_display(request):
             print("Males: "+count_male)
             print("Females: "+count_female) '''
 
-    return render(request, 'patient/sample.html', context)
 
-    #pat_data = patient()
+    #pat_data = patient1()
     #pat_name = pat_data.pat_name
     #pat_id = pat_data.pat_id
     #pat_hos_id = pat_data.hos_id
