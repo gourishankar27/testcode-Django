@@ -34,7 +34,7 @@ def loginusers(request):
                 elif(types.userType == 'patient'):
                     print("Patient")
                     return render(request,"dummy/login.html")
-                elif(types.userType == 'doctor')
+                elif(types.userType == 'doctor'):
                     print("Doctor")
                     return render(request,"doctors/index_doctors.html")
                 
