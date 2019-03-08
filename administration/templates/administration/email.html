@@ -172,11 +172,7 @@
                                      {% csrf_token %}
                                         <input type="submit" name="submit" value="Download Encripted CSV">
                                    </form>
-                                   <form action="\upload" method="GET">
-                                        {% csrf_token %}
-                                           <input type="submit" name="submit" value="upload encripted csv">
-                                      </form>
-
+                                  
                                       <form action="/upload/" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
                                         {% csrf_token %}
                                         <div class="form-group">

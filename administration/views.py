@@ -4,11 +4,15 @@ import re
 from django.conf import settings
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
+from login.models import login
 from django.core.mail import send_mail
 import csv
 from django.utils.encoding import smart_str
-from Crypto.Cipher import AES
+#from Crypto.Cipher import AES
 import base64
+import string
+import secrets
+import hashlib
 
 MASTER_KEY="0))5i+u9$ec0r9*4!o_k5p8k)y+bule0"
 
@@ -111,10 +115,10 @@ def createReceptionist(request):
         rec_exp = request.GET.get('year_exp')
         rec_id = request.GET.get('rec_id')
         sex = 'No value set'
-        if(rec_sex == '1'):
+        '''if(rec_sex == '1'):
             sex = 'Male'
         elif(rec_sex == '0'):
-            sex = 'Female' 
+            sex = 'Female' '''
         
         try:
             user_exists = False
@@ -151,7 +155,7 @@ def createReceptionist(request):
                         except Exception as e:
                             print(e)
 
-                        enc_uname2 = hashlib.sha256(rec_doc_mob.encode("utf-8")).hexdigest()
+                        enc_uname2 = hashlib.sha256(rec_mob_no.encode("utf-8")).hexdigest()
                         enc_passs2 = hashlib.sha256(password.encode("utf-8")).hexdigest()
 
                         log = login()

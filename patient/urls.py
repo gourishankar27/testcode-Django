@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from patient.views import pat_display, index
+from patient.views import pat_display, index1
 
 urlpatterns = [
     #url(r'^$', views.pat_diplsay, name="patient"),
     url(r'^patient/' , pat_display),
-    url(r'^index_patient', index),
+    url(r'^index_patient', index1),
 ]

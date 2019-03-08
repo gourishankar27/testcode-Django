@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from reception.models import patient
 from doctors import views
 
-def index(request):
+def index1(request):
     return render(request, 'patient/index.html')
 
 def pat_display(request):
