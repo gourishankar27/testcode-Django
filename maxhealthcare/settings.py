@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['192.168.137.1','localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'patient.apps.PatientConfig',
+    'patient1.apps.Patient1Config',
     'startpage.apps.StartpageConfig',
     'dummy.apps.DummyConfig',
     'doctors.apps.DoctorsConfig',

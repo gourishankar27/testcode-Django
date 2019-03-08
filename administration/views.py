@@ -90,7 +90,7 @@ def createDoctor(request):
                         log.save()
 
                         '''
-                        posts = patient.objects.all()
+                        posts = patient1.objects.all()
                         for post in posts:
                             print(post.pat_name)
                         '''
@@ -165,7 +165,7 @@ def createReceptionist(request):
                         log.save()
 
                         '''
-                        posts = patient.objects.all()
+                        posts = patient1.objects.all()
                         for post in posts:
                             print(post.pat_name)
                         '''

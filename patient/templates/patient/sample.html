@@ -1,10 +1,12 @@
 {% if pat_data %}
-
-    {% for var in pat_data %}    
-        <li>var-{{ var.pat_name }}</li>
+    {% for var in pat_data %}
+        {% if var.id == pat_id %}  
+            <li>var-{{ var.id }}-{{ var.pat_name }}</li>
+        {% else %}
+            <h2>Error 2</h2>
+        {% endif %}
     {% endfor %}
-    
 <h5>Total count of Patients : {{pat_data.count}} </h5>>    
 {% else %}
-    <h2>Errror</h2>
+    <h2>Errror 1</h2>
 {% endif %}

@@ -32,7 +32,7 @@ def loginusers(request):
                 if(types.userType == 'reception'):
                     print("Reception")
                     return render(request,"reception/reception.html")
-                elif(types.userType == 'patient'):
+                elif(types.userType == 'patient1'):
                     print("Patient")
                     return render(request,"patient/login.html")
                 elif(types.userType == 'doctor'):

@@ -1,0 +1,9 @@
+ {% if obj %}
+    {% for data in obj %}
+        <li>data - {{data.id}} - {{data.pat_name}}</li>
+    {% endfor %}
+ {% else %}
+        <h2>Error</h2>
+ {% endif %}
+
+
