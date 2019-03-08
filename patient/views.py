@@ -3,13 +3,8 @@ from django.http import HttpResponse
 from reception.models import patient
 from doctors import views
 
-<<<<<<< HEAD
-def index1(request):
-    return render(request, 'patient/index.html')
-=======
 def index(request):
     return render(request, 'patient1/index.html')
->>>>>>> 6d2fb7e5b89dbf801483c37c2a629902d31c4472
 
 def pat_display(request):
     pat_data = patient.objects.all()
