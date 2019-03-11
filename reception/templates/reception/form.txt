@@ -1,0 +1,1 @@
+Our project focus on the confidentiality of patient's medical records. All data of the patient will be encrypted and stored in the database. The encryption will be done with the help of an encryption key to which only the patient will have the access. The cryptographic encryption technology used are AEIS and SHA256.  The web application is built using Django framework has 

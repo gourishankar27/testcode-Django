@@ -75,14 +75,15 @@ def createPatient(request):
                         log = login()
                         log.loginId = enc_uname
                         log.passWord = enc_passs
-                        log.userType = 'patient'
+                        log.userType = 'patient1'
                         log.save()
 
                         '''
-                        posts = patient.objects.all()
+                        posts = patient1.objects.all()
                         for post in posts:
                             print(post.pat_name)
                         '''
+                        return render(request,'reception/reception.html')
         except Exception as e:
             print(e)               
     except Exception as e:

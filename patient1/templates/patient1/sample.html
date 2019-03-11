@@ -1,0 +1,14 @@
+<h1>Welcome</h1>
+
+{% if pat_data %}
+    {% for data in pat_data %}
+        <li>data - {{data.id}} - {{data.pat_name}}</li>
+    {% endfor %}
+{% else %}
+    <h2>Error</h2>
+{% endif %}
+
+<!--<form action="/patient1/OnePatient.html" method="get">
+    <input type="text" name="id" value="Enter patient id">
+    <input type="submit" name="sub_but" value="View">
+</form>-->

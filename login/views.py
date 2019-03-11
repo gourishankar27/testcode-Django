@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import login
 from django.http import HttpResponse
-from dummy.views import index
+from patient.views import index1
 from reception.views import index
 from doctors.views import index_doctor
+from administration.views import index
 import hashlib
 
 
@@ -31,12 +32,15 @@ def loginusers(request):
                 if(types.userType == 'reception'):
                     print("Reception")
                     return render(request,"reception/reception.html")
-                elif(types.userType == 'patient'):
+                elif(types.userType == 'patient1'):
                     print("Patient")
-                    return render(request,"dummy/login.html")
-                elif(types.userType == 'doctor')
+                    return render(request,"patient/login.html")
+                elif(types.userType == 'doctor'):
                     print("Doctor")
-                    return render(request,"doctors/index_doctors.html")
+                    return render(request,"doctors/add-case.html")
+                elif(types.userType == 'admin'):
+                    print("Admin")
+                    return render(request,"administration/index.html")
                 
             #else:
              #   return HttpResponse("User not found")
